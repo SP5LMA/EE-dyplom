@@ -4,7 +4,7 @@ zgodny z Zarządzeniami JM Rektora PW: 24/2016, 43/2016, 57/2016.
 Większość opcji ustawiona zgodnie z zaleceniami.
 Główne różnice - dla poprawy czytelności pracy:
  * stopień pisma 12 pt (zamiast 11 pt)
- * zwiększone światło międzywierszowe
+ * zwiększone światło międzywierszowe (1.46557 zamiast 1.15)
  * wyróżniające się nagłówki rozdziałów
  * kolorowe, klikalne odnośniki
 
