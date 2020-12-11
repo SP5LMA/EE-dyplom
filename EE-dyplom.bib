@@ -1,0 +1,178 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Typy bibliografii:
+%  - artykuł z czasopisma,
+%  - artykuł z konferencji,
+%  - materiały konferencyjne,
+%  - książka,
+%  - fragment książki,
+%  - książka z serii,
+%  - krótka broszura,
+%  - praca magisterska,
+%  - praca doktorska,
+%  - instrukcja obsługi,
+%  - raport techniczny,
+%  - materiały nieopublikowane,
+%  - inne typy materiałów źródłowych.
+% Więcej informacji na stronie https://www.bibtex.com/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Artykuły naukowe z czasopism i konferencji
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Article - artykuł z czasopisma.
+% Wymagane pola: author, title, journal, year.
+% Opcjonalne pola: volume, number, pages, month, note.
+@Article{maxwell1865,
+    author  = {James Clerk Maxwell},
+    title   = {A Dynamical Theory of the Electromagnetic Field},
+    journal = {Philosophical Transactions of the Royal Society},
+    year    = {1865},
+    number  = {155},
+    pages   = {459-512},
+    month   = {1},
+    note    = {\href{https://royalsocietypublishing.org/doi/pdf/10.1098/rstl.1865.0008}{<https://royalsocietypublishing.org/doi/pdf/10.1098/rstl.1865.0008>}, dostęp uzyskano 2020-12-03},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% InProceedings - artykuły z konferencji
+% Wymagane pola: author or editor, title, publisher, year.
+% Opcjonalne pola: volume or number, series, address, edition, month, note.
+@inproceedings{cichon1995,
+    author  = {D. J. {Cichon} and W. {Wiesbeck}},
+    title   = {The Heinrich Hertz wireless experiments at Karlsruhe in the view of modern communication},
+    publisher   = {Institution of Engineering and Technology},
+    year        = {1995},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Proceedings - publikacja pokonferencyjna, zbiór artykułów z jednej konferencji
+% Wymagane pola: title, year.
+% Opcjonalne pola: editor, volume or number, series, address, publisher, note, month, organization.
+@proceedings{cpee2018,
+    title   = {19th International Conference Computational Problems of Electrical Engineering},
+    year    = {2018},
+    note    = {doi: \href{https://doi.org/10.1109/CPEE44871.2018}{10.1109/CPEE44871.2018}},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Materiały książkowe
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Book - książka mająca wydawcę.
+% Wymagane pola: author or editor, title, publisher, year.
+% Opcjonalne pola: volume or number, series, address, edition, month, note.
+@book{fowler2009,
+    author    = {Kim Fowler},
+    title     = {Mission-Critical and Safety-Critical Systems Handbook: Design and Development for Embedded Applications},
+    publisher = {Newnes},
+    year      = {2009},
+    ISBN      = {978-0750685672},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inbook - część książki, na przykład rozdział i/lub zakres stron.
+% Wymagane pola: author lub editor, title, chapter i/lub pages, publisher, year.
+% Opcjonalne pola: volume or number, series, type, address, edition, month, note.
+@inbook{leksinski1995,
+  chapter   = {1-2},
+  pages     = {9-232},
+  title     = {Matematyka},
+  publisher = {Wydawnictwa Naukowo-Techniczne},
+  year      = {1995},
+  author    = {Wojciech Żakowski and Wacław Leksiński},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Incollection - część książki mająca własny tytuł, również książka z serii.
+% Wymagane pola: author, title, booktitle, publisher, year.
+% Opcjonalne pola: editor, volume or number, series, type, chapter, pages, address, edition, month, note.
+@incollection{lncsevo,
+  author    = {Gyu Myoung Lee and Noel Crespi and Jun Kyun Choi and Matthieu Boussard},
+  title     = {Internet of Things},
+  booktitle = {Evolution of Telecommunication Services},
+  series    = {Lecture Notes in Computer Science},
+  publisher = {Springer-Verlag Berlin Heidelberg},
+  year      = {2013},
+  editor    = {Emmanuel Bertin and Noel Crespi and Thomas Magedanz},
+  volume    = {7768},
+  isbn      = {978-3642415685},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Booklet - praca, która została wydrukowana i oprawiona ale nie mająca wydawcy lub stojącej za nią instytucji, broszurka mająca 4-48 stron
+% Wymagane pola: title.
+% Opcjonalne pola: author, howpublished, address, month, year, note.
+@booklet{giglio,
+  author = {Pierluigi Giglio},
+  title  = {Postmodernism and Plagiarism},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MastersThesis - praca magisterska (uwaga: masters a nie master)
+% Wymagane pola: author, title, school, year.
+% Opcjonalne pola: type, address, month, note.
+@mastersthesis{poirier2020,
+    author  = {Izabela Poirier},
+    title   = {Wykorzystanie technologii Blockchain w komunikacji urządzeń Internetu Rzeczy},
+    school  = {Politechnika Warszawska, Wydział Elektryczny, Instytut Elektrotechniki Teoretycznej i Systemów Informacyjno-Pomiarowych},
+    year    = {2020},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% phdthesis - praca doktorska
+% Wymagane pola: author, title, school, year.
+% Opcjonalne pola: type, address, month, note.
+@phdthesis{truong2018,
+    author  = {Nguyen Binh Truong},
+    title   = {Evaluation of trust in the Internet of Things : models, mechanisms and applications},
+    school  = {Liverpool John Moores University},
+    year    = {2018},
+    note    = {doi: \href{http://doi.org/10.24377/researchonline.ljmu.ac.uk.00009241}{10.24377/researchonline.ljmu.ac.uk.00009241}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dokumenty techniczne
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% manual - instrukcja obługi, specyfikacja techniczna, nota katalogowa (datasheet)
+% Wymagane pola: title.
+% Opcjonalne pola: author, organization, address, edition, month, year, note.
+@manual{AN4230,
+    title           = {STM32 microcontroller random number generation validation using the NIST statistical test suite},
+    organization    = {STMicroelectronics},
+    year            = {2020},
+    month           = {8},
+    note            = {AN4230},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% techreport - raport techniczny
+% Wymagane pola: author, title, institution, year.
+% Opcjonalne pola: type, number, address, month, note.
+@techreport{nask2020,
+    author      = {{Zespół CERT Polska}},   % Nietypowy autor - dodatkowe nawiasy powodują, że nie zostanie uznany za imię i nazwisko co byłoby komiczne (Polska Z. C.)
+    title       = {Krajobraz bezpieczeństwa polskiego Internetu w 2019 roku},
+    institution = {NASK -- Państwowy Instytut Badawczy},
+    year        = {2020},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dokumenty nietypowe
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% unpublished - dokument mający autora i tytuł ale nie opublikowany typowymi metodami
+% Wymagane pola: author, title, note.
+% Opcjonalne pola: month, year.
+@unpublished{wilamowski2017,
+  author    = {Maciej Wilamowski},
+  title     = {,,Daj, ać ja pobruczę, a ty poczywaj''. Pierwsze zdanie po polsku w historii},
+  note    = {\href{https://twojahistoria.pl/2017/11/21/daj-ac-ja-pobrucze-a-ty-poczywaj-co-powinienes-wiedziec-o-pierwszym-zdaniu-zapisanym-w-jezyku-polskim/}{<https://twojahistoria.pl/2017/11/21/daj-ac-ja-pobrucze-a-ty-poczywaj-co-powinienes-wiedziec-o-pierwszym-zdaniu-zapisanym-w-jezyku-polskim/>}, dostęp uzyskano 2020-12-03},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% misc - jeśli wszystkie inne kategorie nie pasują; przynajmniej jedno z pól opcjonalnych musi być użyte
+% Wymagane pola: brak
+% Opcjonalne pola: author, title, howpublished, month, year, note.
+@misc{szablon,
+    author  = {Łukasz Makowski},
+    title   = {Szablon prac dyplomowych dla Wydziału Elektrycznego Politechniki Warszawskiej},
+    howpublished    = {\href{https://github.com/SP5LMA/EEDyplom}{<https://github.com/SP5LMA/EEDyplom>}},
+}
+
