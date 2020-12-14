@@ -40,16 +40,16 @@
 \ProcessKeyvalOptions*
 
 
-\ifnum\pdfstrcmp{\eethesis}{inz} = 0
+\ifnum\strcmp{\eethesis}{inz} = 0
     \newcommand{\locallang}{PL}
 \fi
-\ifnum\pdfstrcmp{\eethesis}{mgr} = 0
+\ifnum\strcmp{\eethesis}{mgr} = 0
     \newcommand{\locallang}{PL}
 \fi
-\ifnum\pdfstrcmp{\eethesis}{bsc} = 0
+\ifnum\strcmp{\eethesis}{bsc} = 0
     \newcommand{\locallang}{EN}
 \fi
-\ifnum\pdfstrcmp{\eethesis}{msc} = 0
+\ifnum\strcmp{\eethesis}{msc} = 0
     \newcommand{\locallang}{EN}
 \fi
 
@@ -61,7 +61,7 @@
 \setglossarysection{section}
 \makeglossaries
 \loadglsentries{glossary}
-\ifnum\pdfstrcmp{\locallang}{PL} = 0 
+\ifnum\strcmp{\locallang}{PL} = 0 
     \newcommand{\acronymstitle}{Wykaz skrótów i symboli}
 \else
     \newcommand{\acronymstitle}{List of Abbreviations and Symbols}
@@ -100,7 +100,7 @@
 % Musi być wczytana na początku
 % ---------------------------------------------
 \RequirePackage{polyglossia}
-\ifnum\pdfstrcmp{\locallang}{PL} = 0 
+\ifnum\strcmp{\locallang}{PL} = 0 
     \setdefaultlanguage{polish}
 \else
     \setdefaultlanguage{english}
@@ -405,7 +405,7 @@
 % ---------------------------------------------
 \RequirePackage{etoolbox}
 \RequirePackage[titletoc]{appendix}
-\ifnum\pdfstrcmp{\locallang}{PL} = 0 
+\ifnum\strcmp{\locallang}{PL} = 0 
     \newcommand{\appendiceslisttitle}{Spis załączników}
     \newcommand{\appendixprefix}{Załącznik}
 \else
@@ -492,20 +492,20 @@
     \newcommand{\@engtitle}{#1}
 }
 
-\ifnum\pdfstrcmp{\eethesis}{inz} = 0
+\ifnum\strcmp{\eethesis}{inz} = 0
     \newcommand{\frontpageheader}{inzhead.png}
 \fi
-\ifnum\pdfstrcmp{\eethesis}{mgr} = 0
+\ifnum\strcmp{\eethesis}{mgr} = 0
     \newcommand{\frontpageheader}{mgrhead.png}
 \fi
-\ifnum\pdfstrcmp{\eethesis}{bsc} = 0
+\ifnum\strcmp{\eethesis}{bsc} = 0
     \newcommand{\frontpageheader}{bschead.png}
 \fi
-\ifnum\pdfstrcmp{\eethesis}{msc} = 0
+\ifnum\strcmp{\eethesis}{msc} = 0
     \newcommand{\frontpageheader}{mschead.png}
 \fi
 
-\ifnum\pdfstrcmp{\locallang}{PL} = 0
+\ifnum\strcmp{\locallang}{PL} = 0
     \newcommand{\kieruneklocal}{na~kierunku }
     \newcommand{\specjalnosclocal}{w~specjalności }
     \newcommand{\titlelocal}{\@title }
@@ -513,7 +513,7 @@
     \newcommand{\promotorlocal}{promotor}
     \newcommand{\citylocal}{WARSZAWA }
 \fi
-\ifnum\pdfstrcmp{\locallang}{EN} = 0
+\ifnum\strcmp{\locallang}{EN} = 0
     \newcommand{\kieruneklocal}{in~the~field~of~study }
     \newcommand{\specjalnosclocal}{and~specialisation }
     \newcommand{\titlelocal}{\@engtitle }
@@ -603,7 +603,7 @@
 % Spięcie stron streszczeń we właściwej
 % kolejności w jedno polecenie.
 \newcommand{\abstractpages}{
-    \ifnum\pdfstrcmp{\locallang}{PL} = 0
+    \ifnum\strcmp{\locallang}{PL} = 0
         \stronastreszczenia
         \abstractpage
     \else
@@ -616,7 +616,7 @@
 % Oświadczenia o autorstwie
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\authorship}{
-    \ifnum\pdfstrcmp{\locallang}{PL} = 0
+    \ifnum\strcmp{\locallang}{PL} = 0
         \begin{tikzpicture}[remember picture, overlay]
             \node [anchor=north west, inner sep=0pt] at (current page.north west)
             {{\includegraphics[width=\paperwidth]{gfx/oswiadczenie_autora_pracy.pdf}};};
