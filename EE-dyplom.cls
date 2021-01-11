@@ -223,7 +223,10 @@
     \cleardoublepage
     \phantomsection
     \addcontentsline{toc}{chapter}{\refname}
-    \printbibliography
+    {
+        \sloppy
+        \printbibliography
+    }
 }
 %
 % Alternatywa - styl harwardzki:
