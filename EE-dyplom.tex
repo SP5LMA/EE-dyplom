@@ -1,22 +1,31 @@
+% !TEX program = xelatex
+% !TeX encoding = utf8
+% !TeX spellcheck = pl-PL
+
 % ---------------------------------------------
 % Szablon prac dyplomowych na Wydziale Elektrycznym PW,
 % zgodny z Zarządzeniami JM Rektora PW:
 % 24/2016, 43/2016, 57/2016.
 % Większość opcji ustawiona zgodnie z zaleceniami.
 % Główne różnice - dla poprawy czytelności pracy:
-%   * stopień pisma 12 pt (zamiast 11 pt)
 %   * zwiększone światło międzywierszowe
 %   * wyróżniające się nagłówki rozdziałów
 %   * wyróżnione kolorem, klikalne odnośniki
 %
 % Jak używać szablonu:
-% 1) Szablon jest przygotowany dla XeLaTeX więc jeśli używasz
+%
+% 1. Szablon jest przygotowany dla XeLaTeX więc jeśli używasz
 % Overleaf to otwórz "Menu" i zmień "Compiler" na "XeLaTeX".
-% 2) ustaw niżej właściwy typ pracy w linii "documentclass"
+% Kompilacja za pomocą pdflatex jest możliwa ale niewskazana.
+%
+% 2. ustaw niżej właściwy typ pracy w linii "documentclass"
 % wybierając dla "thesis" jedną opcję z: inz, mgr, bsc, msc
-% 3) spersonalizuj pola w pliku "config.tex"
-% 4) modyfikuj, zmieniaj i dodawaj treść w katalogu "tekst"
-% 5) dodawaj rysunki w katalogu "rysunki" (gfx raczej nie używaj)
+%
+% 3. spersonalizuj pola w pliku "config.tex"
+%
+% 4. modyfikuj, zmieniaj i dodawaj treść w katalogu "tekst"
+%
+% 5. dodawaj rysunki w katalogu "rysunki" (gfx raczej nie używaj)
 %
 % Dziękuję innym Autorom, których szablonami mogłem się inspirować:
 % prof. dr hab. inż. Jacek Starzyński, Wydział Elektryczny, PW
@@ -28,9 +37,12 @@
 % https://github.com/SP5LMA/EE-dyplom
 % ---------------------------------------------
 
-% Wybierz rodzaj pracy dyplomowej
-% Pick thesis type
-\documentclass[thesis=bsc,faculty=ee]{EE-dyplom} % thesis=[inz|mgr|bsc|msc]
+% Wybierz rodzaj pracy dyplomowej oraz wydział
+% Pick thesis type and faculty
+\documentclass[thesis=inz,faculty=ee]{EE-dyplom} 
+% thesis=[inz|mgr|bsc|msc]
+% faculty=[ee]
+
 % Konfiguracja - do personalizacji
 % Configuration - to be personalized
 \input{config}
