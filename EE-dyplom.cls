@@ -167,31 +167,24 @@
 \RequirePackage{setspace}
 % -------------------------------------------------------------------
 % Alternatywnie supergęsty tekst: lineskip 12 pt gdy stopień pisma 12 pt
-% 52 linie tekstu 12 pt
 %\setstretch{0.8333333} % bo LaTeX ma defaultowy współczynnik 1.2
 % -------------------------------------------------------------------
 % Interlinia 1,15 (0.83333 * 1.15)
-% 46 linii tekstu 12 pt
 %\setstretch{0.9583}
 % -------------------------------------------------------------------
 % Alternatywnie interlinia 1.2*stopień pisma (standard w LaTeX)
-% 44 linie tekstu 12 pt
 %\singlespacing % == \setstretch{1.0}
 % -------------------------------------------------------------------
 % Alternatywnie superzłoty podział (0.83333 * 1.46557)
-% 35 linii tekstu 12 pt
 \setstretch{1.2213}
 % -------------------------------------------------------------------
 % Alternatywnie interlinia 1.5
-% 35 linii tekstu 12 pt
 %\onehalfspacing % == \setstretch{1.25} 1.25*1.2=1.5
 % -------------------------------------------------------------------
 % Alternatywnie złoty podział (odstęp 1.618):
-% 31 linii tekstu 12 pt
 %\setstretch{1.348333}
 % -------------------------------------------------------------------
 % Alternatywnie podwójna interlinia
-% 26 linii tekstu 12 pt
 %\doublespacing
 
 % -------------------------------------------------------------------
@@ -376,6 +369,24 @@
 % -------------------------------------------------------------------
 \RequirePackage[usenames,dvipsnames]{xcolor}
 \definecolor{mysamplecolor}{rgb}{0.123, 0.456, 0.789}
+% Kolory wydziałów "budowlanych"
+\definecolor{bud}{RGB}{106, 186, 156}
+
+% Kolory wydziałów "mechanicznych"
+\definecolor{mech}{RGB}{234, 124, 90}
+
+% Kolory wydziałów "chemicznych"
+\definecolor{chem}{RGB}{254, 213, 66}
+
+% Kolory wydziałów "elektrycznych"
+\definecolor{elek}{RGB}{120, 150, 207}
+
+% Kolory wydziałów "matematyczno-fizycznych"
+\definecolor{mfiz}{RGB}{150, 95, 119}
+
+% Kolory wydziałów "multidyscyplinarnych"
+\definecolor{multi}{RGB}{180, 160, 170}
+
 % Kolor Wydziału Elektrycznego i dwa pokrewne monochromatyczne.
 % Kolor podstawowy jest tu określony w przybliżeniu, gdyż 
 % Zarządzenie definiuje go niejednoznacznie. Dla wskazanego 
@@ -708,10 +719,10 @@
     \chapter*{\acronymstitle}
     \pagestyle{plain}
     \addcontentsline{toc}{chapter}{\acronymstitle}
-    \printglossary[type=\acronymtype,title={}]
-%    \printglossary[type=symbols,title={}] % problem z symbolami
+    \printglossary[type=\acronymtype,title={}] % nie w Overleaf
+    \printglossary[type=symbols,title={}] % nie w Overleaf
     % Alternatywna lista symboli - do użycia tylko w Overleaf
-    \input{symbols}
+%    \input{symbols}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

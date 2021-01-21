@@ -1,6 +1,7 @@
 pdflatex : clean
 	pdflatex EE-dyplom
 	biber EE-dyplom
+	makeglossaries EE-dyplom
 	pdflatex EE-dyplom
 	pdflatex EE-dyplom
 
@@ -8,6 +9,7 @@ pdflatex : clean
 xelatex : clean
 	xelatex EE-dyplom
 	biber EE-dyplom
+	makeglossaries EE-dyplom
 	xelatex EE-dyplom
 	xelatex EE-dyplom
 

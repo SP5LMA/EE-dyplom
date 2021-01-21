@@ -51,7 +51,7 @@ Rysunki w \LaTeX{u} wstawiane są za pomocą \texttt{includegraphics}. Tego pole
 
 Istotną kwestią rysunków technicznych jest ich jakość. Jakość rysunków rastrowych jest ograniczona ich rozdzielczością mierzoną liczbą punktów (pikseli) na daną jednostkę długości. Dobry wydruk rastrowy to przynajmniej 600 dpi czyli punktów na cal. Można uzyskać ,,nieskończoną'' rozdzielczość stosując grafikę wektorową.
 
-Na rysunku~\ref{rys:wektorowo} widzimy porównanie efektu użycia grafiki wektorowej i rastrowej. Obrazek po lewej stronie jest samodzielnym plikiem PDF, który wykorzystuje grafikę wektorową. Obrazek po prawej stronie to wersja wyeksportowana do pliku PNG, skompresowanego bezstratnie. Po powiększeniu podglądu widzimy na rysunku~\ref{rys:wektorowopdf} gładkie linie w przeciwieństwie do rysunku~\ref{rys:wektorowopng} gdzie dostrzeżemy pojedyncze piksele. Efekt ten nie musi być łatwy do zauważenia na ekranie komputera, który typowo ma rozdzielczość około 100 ppi (pikseli na cal) a czasami zaledwie 72 ppi. Jednak problem ten ujawni się dopiero po wydrukowaniu pracy.
+Na rysunku~\ref{rys:wektorowo} widzimy porównanie efektu użycia grafiki wektorowej i rastrowej. Obrazek po lewej stronie jest samodzielnym plikiem PDF, który wykorzystuje grafikę wektorową. Obrazek po prawej stronie to wersja wyeksportowana do pliku PNG, skompresowanego bezstratnie. Po powiększeniu podglądu widzimy na rysunku~\ref{rys:wektorowopdf} gładkie linie w przeciwieństwie do rysunku~\ref{rys:wektorowopng} gdzie dostrzeżemy pojedyncze piksele. Efekt ten nie musi być łatwy do zauważenia na ekranie komputera, który typowo ma rozdzielczość około 100 ppi (pikseli na cal) a czasami zaledwie 72 ppi. Jednak problem ten ujawni się po wydrukowaniu pracy.
 
 O rysunku nie należy myśleć w kontekście umieszczenia go powyżej lub poniżej odwołania w tekście, chociaż powinien znajdować się w obrębie rozdziału lub podrozdziału, który ten rysunek opisuje. Rysunek ma trafić w takie miejsce, by czytelnik mógł go od razu spostrzec, gdy w tekście pojawia się odwołanie do tego rysunku.
 
@@ -111,6 +111,17 @@ Cytaty obcojęzyczne są możliwe za pomocą polecenia \texttt{foreignquote} dla
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Kolory}
+Zarządzenie nr 57/2016 JM Rektora PW definiuje kolory dla poszczególnych grup wydziałów:
+\begin{itemize}
+ \item Kolor ,,miętowy'' -- \colorbox{bud}{wydziały ,,budowlane'':}{\color{bud} Architektury, Geodezji i Kartografii, Inżynierii Lądowej, Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska, Transportu.}
+ \item Kolor ,,morelowy'' -- \colorbox{mech}{wydziały ,,mechaniczne'':}{\color{mech} Inżynierii Produkcji, Mechaniczny Energetyki i Lotnictwa, Mechatroniki, Samochodów i Maszyn Roboczych.}
+ \item Kolor ,,słoneczny'' -- \colorbox{chem}{wydziały ,,chemiczne'':}{\color{chem} Chemiczny, Inżynierii Chemicznej i Procesowej, Inżynierii Materiałowej.}
+ \item Kolor ,,szafirowy'' -- \colorbox{elek}{wydziały ,,elektryczne'':}{\color{elek} Elektryczny, Elektroniki i Technik Informacyjnych.}
+ \item Kolor ,,śliwkowy,'' -- \colorbox{mfiz}{wydziały ,,matematyczno-fizyczne'':}{\color{mfiz} Fizyki, Matematyki i Nauk Informacyjnych.}
+ \item Kolor ,,wrzosowy'' -- \colorbox{multi}{wydziały ,,multidyscyplinarne'' oraz ,,społeczno-ekonomiczne'':}{\color{multi} Administracji i Nauk Społecznych, Zarządzania, Budownictwa,~Mechaniki i Petrochemii; Kolegium Nauk Ekonomicznych i Społecznych.}
+\end{itemize}
+
+\subsection{Przykład zdefiniowanej palety kolorów}
 Na rysunku~\ref{rys:colorsample} pokazana jest propozycja zestawienia kolorów zdefiniowana w niniejszym szablonie. Podstawowa barwa Wydziału Elektrycznego, zgodnie z obowiązującymi na PW zasadami dotyczącymi prac dyplomowych to \textcolor{EEBlue}{EEBlue}. Dodatkowo zdefiniowane są jej dwa odcienie:
 \begin{itemize}
     \item ton jaśniejszy (ang. \textit{tint}) \textcolor{EEBlueLight}{EEBlueLight} (EEBlueLight),
@@ -161,7 +172,7 @@ W pracy dyplomowej użycie barw powinno być bardzo ograniczone i dobrze przemy�
 \section{Tabele}
 Prostą tabelą, wprowadzoną ręcznie jest przedstawiająca kilka zjawisk astronomicznych tabela~\ref{tab:zjawiska}. Tego rodzaju tabela wystarczy w większości prac. Wygląd tabelaryczny uzyskuje się za pomocą otoczenia \texttt{tabular}. Żeby tabelę opatrzyć podpisem (\texttt{caption}) i znacznikiem pozwalającym na odwołania, trzeba ją otoczyć \texttt{tabular} za pomocą środowiska \texttt{table}.
 
-\begin{table}[!b]
+\begin{table}[h]
  \centering
   \begin{tabular}{p{2.5cm}c|l}
     Data        &   Godzina (UTC)   &   Zdarzenie\\\hline
@@ -226,7 +237,7 @@ Ich zaletą jest niemal natychmiastowe pokazywanie efektu.
 
 
 \subsection{André-Marie Ampère}
-André-Marie Ampère urodził się 20 stycznia 1775 roku. Był francuskim fizykiem i matematykiem, samoukiem, pionierem w zakresie badań nad elektromagnetyzmem. Był profesorem École polytechnique oraz Collège de France. Został członkiem Francuskiej Akademii Nauk. Ampère zmarł w roku 1836. Jego portret pokazany jest na rysunku~\ref{rys:ampere}.
+André-Marie Ampère urodził się 20 stycznia 1775 roku. Był francuskim fizykiem i matematykiem, pionierem w zakresie badań nad elektromagnetyzmem. W kształceniu od wczesnych lat wspierał go ojciec, z którego znacznej biblioteki Ampère swobodnie korzystał. Chociaż nie otrzymał formalnego wykształcenia to uzyskał wysoką renomę jako nauczyciel i niezależny badacz. Dzięki temu został profesorem matematyki w École polytechnique. Następnie kierował katedrą fizyki w Collège de France. Został członkiem Francuskiej Akademii Nauk. Jego portret pokazany jest na rysunku~\ref{rys:ampere}. Ampère zmarł 10 czerwca 1836 roku, która to data została później przyjęta przez Stowarzyszenie Elektryków Polskich jako ,,Międzynarodowy Dzień Elektryka''.
 
 \begin{figure}[!hb]
 	\centering \includegraphics[width=0.33\linewidth]{Ampere.jpg}
@@ -245,7 +256,7 @@ André-Marie Ampère urodził się 20 stycznia 1775 roku. Był francuskim fizyki
 \subsection{Michael Faraday}
 Michael Faraday urodził się 22 września 1791 roku w niezamożnej rodzinie i otrzymał jedynie wykształcenie podstawowe. W dużej mierze był samoukiem ale już jako kilkunastolatek dał się poznać jako człowiek utalentowany i otrzymał wsparcie ze strony ludzi kultury, i nauki. Wniósł fundamentalny wkład do badań nad elektromagnetyzmem i elektrochemią. Odkrył zjawisko indukcji elektromagnetycznej i zbudował pierwszy silnik elektryczny. Badał oddziaływanie światła z materią i między innymi odkrył zjawisko magnetooptyczne. Wykonane przez niego koloidalne złoto nadal jest aktywne. Zajmując się chemią odkrył benzen. Został członkiem Royal Institute oraz wielu towarzystw naukowych w innych krajach. Mimo licznych sukcesów i możliwości unikał zyskiwania stanowisk i tytułów. Faraday Zmarł w roku 1867. Jego portret pokazany jest na rysunku~\ref{rys:faraday}.
 
-\begin{figure}[!hb]
+\begin{figure}[!ht]
 	\centering \includegraphics[width=0.33\linewidth]{Faraday.jpg}
 	\caption{Michael Faraday}
 	\label{rys:faraday}
@@ -265,7 +276,7 @@ Michael Faraday urodził się 22 września 1791 roku w niezamożnej rodzinie i o
 
 
 \subsection{Georg Simon Ohm}
-Georg Simon Ohm, pokazany na rysunku~\ref{rys:ohm}, urodził się 16 marca 1789 roku w Erlangen. W latach 1833-1849 był profesorem Politechniki w Norymberdze a następnie Uniwersytetu w Monachium. Sformułował prawo opisujące zależność między prądem a napięciem $U=R \cdot I$. Zmarł w roku 1854 w Monachium. Jego portret pokazany jest na rysunku~\ref{rys:ohm}.
+Georg Simon Ohm urodził się 16 marca 1789 roku w Erlangen. We wczesnych latach życia większość wiedzy i wykształcenia otrzymał od własnego ojca, samouka. W wieku 22 lat uzyskał doktorat z matematyki na Uniwersytecie w Erlangen, gdzie przez krótki czas również pracował. W latach 1833-1849 był profesorem Politechniki w Norymberdze a następnie Uniwersytetu w Monachium. Sformułował prawo opisujące zależność między prądem a napięciem $U=R \cdot I$. Zmarł w roku 1854 w Monachium. Jego portret pokazany jest na rysunku~\ref{rys:ohm}.
 
 \begin{equation}
     R = \frac{U}{I}
@@ -436,7 +447,7 @@ b_x        &     b_y          &      b_z
 \section{Kody źródłowe}
 Do umieszczania kodów źródłowych w szablonie wykorzystany jest pakiet \texttt{listings}. Została przygotowana propozycja wyglądu listingów oparta o prezentowane wcześniej kolory. Ustawienia można zmienić w pliku \texttt{cls}. Poniżej znajduje się kilka przykładów wykorzystania wspomnianego pakietu. Więcej informacji można znaleźć na przykład w dokumentacji Overleaf\footnote{\href{https://www.overleaf.com/learn/latex/code_listing}{<Overleaf -- Code listing>}}
 
-Kod źródłowy można umieścić bezpośrednio w pliku tex, tak jak poniższy przykład w listingu~\ref{lst:hellopy}.
+Kod źródłowy można umieścić bezpośrednio w pliku tex, tak jak poniższy przykład z~listingu~\ref{lst:hellopy}. Zauważ niezbyt fortunne przejście na nową stronę, zakłócone przez przypis dolny, czego niestety \LaTeX{} nie jest w stanie poprawić.
 
 \begin{lstlisting}[language=Python,
     caption={Prosty program w języku Python},
@@ -460,7 +471,7 @@ if __name__ == "__main__":
     main()
 \end{lstlisting}
 
-Przykład kodu źródłowego w innym języku (C) jest pokazany w listingu~\ref{lst:helloC}. Spójna kolorystyka kodów w różnych językach może być pożądana albo wręcz przeciwnie. Dlatego można rozważyć jakąś, niewielką, lokalną zmianę stylu tak, jak w poniższym przykładzie. Zauważ niezbyt fortunne przejście na nową stronę, zakłócone przez przypis dolny.
+Przykład kodu źródłowego w innym języku (C) jest pokazany w listingu~\ref{lst:helloC}. Spójna kolorystyka kodów w różnych językach może być pożądana albo wręcz przeciwnie. Dlatego można rozważyć jakąś, niewielką, lokalną zmianę stylu tak, jak w poniższym przykładzie.
 
 \begin{lstlisting}[language=C,
     backgroundcolor=\color{EEGold!5!white},
@@ -495,17 +506,19 @@ Listing~\ref{lst:Keccak} ma automatycznie ustawiany podpis na podstawie nazwy pl
 Kilka ostatnich uwag odnośnie używania szablonu i \LaTeX{a}.
 
 \subsection{Podstawowe style tekstu}
-W przykładowym dokumencie pojawiło się modyfikowanie wyglądu liter za pomocą kilku metod. Tu zostaną one zebrane na liście z przykładami:
+W przykładowym dokumencie pojawiło się modyfikowanie wyglądu liter za pomocą kilku metod. Tu dla porządku zostaną one zebrane na jednej liście z przykładami użycia:
 \begin{itemize}
     \item \textbf{tekst wytłuszczony},
     \item \textit{tekst pochylony},
     \item \texttt{tekst maszynowy},
     \item \underline{tekst podkreślony}
-    \item tekst \emph{wyróżniony} \textbf{odmiennym \emph{stylem}}, \textit{w zależności \emph{od sytuacji}}, \emph{jest to \textbf{rozwiązanie} \textit{uniwersalne}}.
+    \item tekst \emph{wyróżniony} \textbf{odmiennym \emph{stylem}}, \textit{w zależności \emph{od sytuacji}} -- \emph{jest to \textbf{rozwiązanie} \textit{uniwersalne}}.
 \end{itemize}
 
 \subsection{Wiszące znaki}
-W polskiej tradycji piśmienniczej samotne literki nie powinny występować na końcu linii. Aby połączyć taką literę z następującym po nim słowem należy użyć znaku tyldy (\textasciitilde{}). Dotyczyć to może liter takich jak: a, i, o, u, w, z. Pod koniec pisania pracy dobrze jest skorzystać z opcji ,,znajdź i zamień'' by wymienić wszystkie ciągi znaków \keys{\SPACE, znak, \SPACE} na \keys{\SPACE, znak, \textasciitilde{}}.
+W polskiej tradycji piśmienniczej samotne literki nie powinny występować na końcu linii. Aby połączyć taką literę z następującym po nim słowem należy użyć znaku tyldy (\textasciitilde{}). Dotyczyć to może liter takich jak: a, i, o, u, w, z.
+
+Pod koniec pisania pracy dobrze jest skorzystać z opcji ,,znajdź i zamień'' by wymienić wszystkie ciągi znaków \keys{\SPACE, znak, \SPACE} na \keys{\SPACE, znak, \textasciitilde{}}.
 
 
 \subsection{Wypunktowania}
@@ -533,7 +546,14 @@ Podejście do typografii w \LaTeX{u} jest profesjonalne co wiąże się też z d
 \subsection{Akronimy i symbole}
 Zgodnie z obowiązującym Zarządzeniem pod koniec pracy znajduje się lista symboli i akronimów pod nazwą ,,Wykaz symboli i skrótów''. Na liście wystąpią tylko te akronimy, które faktycznie zostaną użyte w tekście, za pomocą jednej z pokazanych niżej metod. Jeśli żaden akronim lub symbol w tekście nie wystąpi, w sensie użycia odwołania za pomocą odpowiedniego polecenia, to generowanie strony z listą akronimów zostanie pominięte. Większość prac do tej pory była pozbawiona tego dodatku.
 
-Szablon używa pakietu \texttt{glossaries} do zarządzania akronimami i symbolami. Listę tych elementów należy przygotować w pliku \href{./glossary.tex}{glossary.tex}, zgodnie z pokazanym tam szablonem.
+Szablon używa pakietu \texttt{glossaries} do zarządzania akronimami i symbolami. Listę tych elementów należy przygotować w pliku \href{./glossary.tex}{glossary.tex}, zgodnie z pokazanym tam szablonem. Aby w pracy pojawiła się lista akronimów należy użyć polecenia:
+
+\begin{lstlisting}[language=bash,
+    numbers=none,
+    caption=Wygenerowanie listy skrótów i symboli,
+    label={lst:gloss}]
+makeglossaries [nazwa pliku podstawowego bez rozszerzenia tex]
+\end{lstlisting}
 
 Pierwsze użycie akronimu w tekście jest rozpoznawane automatycznie i pojawia się on w pełnej oraz skróconej formie: \gls{CPEE}. Kolejnymi razy prezentuje się już tylko wersja skrócona, chociaż oba wywołania w \LaTeX{u} wyglądają tak samo: \gls{CPEE}. Dzięki temu nie trzeba się zastanawiać, czy dany akronim został wcześniej pokazany w pełnej formie, czy też jeszcze nie.
 
@@ -548,10 +568,11 @@ Chociaż na powyższej liście występuje \gls{PW} to tutaj akronim jest traktow
 
 W Overleaf wykorzystanie wykazu symboli matematycznych okazuje się sprawiać problemy -- indeks nie odświeża się. Dlatego w pliku~\href{./EE-dyplom.cls}{EE-dyplom.cls} zakomentowana jest linia generująca listę symboli:
 \begin{lstlisting}[language=TeX,
-    firstnumber=666,
+    numbers=none,
     caption=EE-dyplom.cls,
     label={lst:EE-dyplom}]
-%    \printglossary[type=symbols,title={}] % problem z symbolami
+    \printglossary[type=\acronymtype,title={}] % nie w Overleaf
+    \printglossary[type=symbols,title={}] % nie w Overleaf
 \end{lstlisting}
 Po pobraniu szablonu i kompilacji lokalnej z użyciem metody przedstawionej niżej nie ma tego problemu i linię można odkomentować aby uzyskać ładną listę symboli.
 
@@ -589,10 +610,12 @@ Inne programy często mają problem z prawidłowym wypełnieniem strony i zostaw
 Strona tuż przed początkiem nowego rozdziału może zostać całkiem pusta i nawet nie będzie mieć numeracji u dołu. Jest to jak najbardziej prawidłowe, gdyż rozdziały mają zaczynać się od strony nieparzystej a więc od strony prawej. Stron bez tekstu nie numeruje się, chociaż są one liczone.
 
 \subsection{Kompilowanie lokalnie}
-Darmowy dostęp do Overleaf zapewnia czas każdej kompilacji nie dłuższy niż 1 minuta. W przypadku skomplikowanej pracy czas ten może zostać przekroczony. Dlatego warto rozważyć pobranie szablonu na własny komputer z zainstalowanym \XeLaTeX{em}. Kompilacja może wówczas wyglądać tak, jak na listingu~\ref{lst:kompilacja}.
+Darmowy dostęp do Overleaf zapewnia czas każdej kompilacji nie dłuższy niż 1 minuta. W przypadku skomplikowanej pracy czas ten może zostać przekroczony i wówczas Overleaf nie wygeneruje pliku wynikowego. Dlatego warto rozważyć pobranie szablonu na własny komputer z zainstalowanym \XeLaTeX{em}. Kompilacja może wówczas wyglądać tak, jak na listingu~\ref{lst:kompilacja}.
 
 \begin{lstlisting}[language=bash,
     caption={Kompilacja pracy dyplomowej lokalnie},
     label={lst:kompilacja}]
 xelatex EE-dyplom && biber EE-dyplom && makeglossaries EE-dyplom && xelatex EE-dyplom && xelatex EE-dyplom
 \end{lstlisting}
+
+Polecenie \textbf{xelatex} można zastąpić przez \textbf{pdflatex} ale nie jest to zalecane.
