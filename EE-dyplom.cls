@@ -43,21 +43,22 @@
 % Zdefiniowanie parametru klasy
 % -------------------------------------------------------------------
 \RequirePackage{kvoptions}
-\SetupKeyvalOptions{family=EE-dyplom.cls, prefix=ee}
+\SetupKeyvalOptions{family=EE-dyplom.cls, prefix=pw}
 \DeclareStringOption[inz]{thesis}
+\DeclareStringOption[EE]{faculty}
 \ProcessKeyvalOptions*
 
 
-\ifnum\strcmp{\eethesis}{inz} = 0
+\ifnum\strcmp{\pwthesis}{inz} = 0
     \newcommand{\locallang}{PL}
 \fi
-\ifnum\strcmp{\eethesis}{mgr} = 0
+\ifnum\strcmp{\pwthesis}{mgr} = 0
     \newcommand{\locallang}{PL}
 \fi
-\ifnum\strcmp{\eethesis}{bsc} = 0
+\ifnum\strcmp{\pwthesis}{bsc} = 0
     \newcommand{\locallang}{EN}
 \fi
-\ifnum\strcmp{\eethesis}{msc} = 0
+\ifnum\strcmp{\pwthesis}{msc} = 0
     \newcommand{\locallang}{EN}
 \fi
 
@@ -540,16 +541,16 @@
     \newcommand{\@engtitle}{#1}
 }
 
-\ifnum\strcmp{\eethesis}{inz} = 0
+\ifnum\strcmp{\pwthesis}{inz} = 0
     \newcommand{\frontpageheader}{inzhead.png}
 \fi
-\ifnum\strcmp{\eethesis}{mgr} = 0
+\ifnum\strcmp{\pwthesis}{mgr} = 0
     \newcommand{\frontpageheader}{mgrhead.png}
 \fi
-\ifnum\strcmp{\eethesis}{bsc} = 0
+\ifnum\strcmp{\pwthesis}{bsc} = 0
     \newcommand{\frontpageheader}{bschead.png}
 \fi
-\ifnum\strcmp{\eethesis}{msc} = 0
+\ifnum\strcmp{\pwthesis}{msc} = 0
     \newcommand{\frontpageheader}{mschead.png}
 \fi
 
@@ -570,12 +571,15 @@
     \newcommand{\citylocal}{WARSAW }
 \fi
 
+\newcommand{\pwheader}{Head}
 \ifnum\strcmp{\locallang}{PL} = 0
-    \newcommand{\pwheader}{HeadEEPL.png}
+    \g@addto@macro\pwheader\pwfaculty
+    \g@addto@macro\pwheader{PL.png}
 \fi
 
 \ifnum\strcmp{\locallang}{EN} = 0
-    \newcommand{\pwheader}{HeadEEEN.png}
+    \g@addto@macro\pwheader\pwfaculty
+    \g@addto@macro\pwheader{EN.png}
 \fi
 
 \let\oldmaketitle\maketitle
