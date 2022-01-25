@@ -506,6 +506,11 @@
 % W celu umieszczenia PDF z "Oświadczeniami"
 % -------------------------------------------------------------------
 \RequirePackage{tikz}
+%\RequirePackage[absolute,overlay]{textpos}
+
+\newcommand{\grantlicense}[1]{
+    \newcommand{\@grantlicense}{#1}
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -540,6 +545,9 @@
 \newcommand{\engtitle}[1]{
     \newcommand{\@engtitle}{#1}
 }
+\newcommand{\longdate}[1]{
+    \newcommand{\@longdate}{#1}
+}
 
 \ifnum\strcmp{\pwthesis}{inz} = 0
     \newcommand{\frontpageheader}{inzhead.png}
@@ -568,7 +576,7 @@
     \newcommand{\titlelocal}{\@engtitle }
     \newcommand{\albumlocal}{student record book number }
     \newcommand{\promotorlocal}{supervisor }
-    \newcommand{\citylocal}{WARSAW }
+    \newcommand{\citylocal}{WARSZAWA }
 \fi
 
 \newcommand{\pwheader}{Head}
@@ -679,23 +687,75 @@
     \ifnum\strcmp{\locallang}{PL} = 0
         \begin{tikzpicture}[remember picture, overlay]
             \node [anchor=north west, inner sep=0pt] at (current page.north west)
-            {{\includegraphics[width=\paperwidth]{gfx/oswiadczenie_autora_pracy.pdf}};};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -.8) {\@author};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -1.75) {\@album};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -2.65) {\@kierunek};
+            {{\includegraphics[width=\paperwidth]{gfx/oswiadczeniePL-2021-109.pdf}};};
+            \node[anchor=north west, inner sep=0pt] at(10.4, -1.1) {Warszawa \@longdate};
+            \node[anchor=north west, inner sep=0pt] at(-0.8, -2.3) {\@author};
+            \node[anchor=north west, inner sep=0pt] at(-0.8, -3.6) {\@album};
+            \node[anchor=north west, inner sep=0pt] at(-0.8, -4.8) {\@kierunek};
+            \node[anchor=north west, inner sep=0pt] at(8.8, -14.6) {\@author};
         \end{tikzpicture}
+	\clearpage
     \else
         \begin{tikzpicture}[remember picture, overlay]
             \node [anchor=north west, inner sep=0pt] at (current page.north west)
-            {{\includegraphics[width=\paperwidth]{gfx/thesis_author_declaration-1.pdf}};};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -0.9) {\@author};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -2.33) {\@album};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -3.65) {\@kierunek};
-        \end{tikzpicture}\clearpage
+            {{\includegraphics[width=\paperwidth]{gfx/oswiadczenieEN-2021-109.pdf}};};
+            \node[anchor=north west, inner sep=0pt] at(10.4, -1.4) {Warszawa \@longdate};
+            \node[anchor=north west, inner sep=0pt] at(-0.8, -2.6) {\@author};
+            \node[anchor=north west, inner sep=0pt] at(-0.8, -3.9) {\@album};
+            \node[anchor=north west, inner sep=0pt] at(-0.8, -5.2) {\@kierunek};
+            \node[anchor=north west, inner sep=0pt] at(8.8, -19.6) {\@author};
+        \end{tikzpicture}
+	\clearpage
+    \fi    
+    \cleardoublepage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Oświadczenia o licencji
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\licensedthesis}{
+    \ifnum\strcmp{\locallang}{PL} = 0
         \begin{tikzpicture}[remember picture, overlay]
             \node [anchor=north west, inner sep=0pt] at (current page.north west)
-            {{\includegraphics[width=\paperwidth]{gfx/thesis_author_declaration-2.pdf}};};
+            {{\includegraphics[width=\paperwidth]{gfx/licencjaPL-2021-109.pdf}};};
+            \node[anchor=north west, inner sep=0pt] at(10.4, -1.1) {Warszawa \@longdate};
+            \node[anchor=north west, inner sep=0pt] at(-0.8, -2.3) {\@author};
+            \node[anchor=north west, inner sep=0pt] at(-0.8, -3.6) {\@album};
+            \node[anchor=north west, inner sep=0pt] at(-0.8, -4.8) {\@kierunek};
+            \node[anchor=north west, inner sep=0pt] at(8.8, -14.6) {\@author};
         \end{tikzpicture}
+	\clearpage
+    \else
+        \begin{tikzpicture}[remember picture, overlay]
+            \node [anchor=north west, inner sep=0pt] at (current page.north west)
+            {{\includegraphics[width=\paperwidth]{gfx/licencjaEN-2021-109.pdf}};};
+            \node[anchor=north west, inner sep=0pt] at(11.4, -1.7) {Warszawa \@longdate};
+            \node[anchor=north west, inner sep=0pt] at(-0.8, -2.95) {\@author};
+            \node[anchor=north west, inner sep=0pt] at(-0.8, -4.21) {\@album};
+            \node[anchor=north west, inner sep=0pt] at(-0.8, -5.45) {\@kierunek};
+            \node[anchor=north west, inner sep=0pt] at(10.4, -19.6) {\@author};
+		\node[anchor=south west, inner sep=0pt] at(9.4, -11.7) {\resizebox*{7cm}{1em}{\@title}};
+		\node[anchor=south west, inner sep=0pt] at(10.2, -13.95) {\resizebox*{1.5cm}{1em}{\@engtitle}};
+        \end{tikzpicture}
+	\ifnum\strcmp{\@grantlicense}{TRUE} = 0
+	\begin{tikzpicture}[remember picture, overlay]
+		\draw[thick] (3.5,-11.6) -- (5.5,-11.6);
+		\draw[thick] (.4,-12.05) -- (2.8,-12.05);
+		\draw[thick] (3.9,-13.8) -- (5.4,-13.8);
+		\draw[thick] (12.9,-13.8) -- (14.8,-13.8);
+	\end{tikzpicture}
+	\else
+	{}
+	\fi
+
+%	\begin{tikzpicture}[remember picture, overlay]
+%		\node[anchor=north west, inner sep=0pt] at(10, -10) {FOOOOOOOOOOOBAR};
+%	\end{itkzpicture}
+%	\begin{tikzpicture}[remember picture, overlay]
+%		\node[anchor=north west, inner sep=0pt] at(10, -10) {SNAAAAFFFFUUUU};
+%	\end{itkzpicture}
+%	\fi
+	\clearpage
     \fi    
     \cleardoublepage
 }
@@ -710,6 +770,7 @@
     \maketitle
     \abstractpages
     \authorship
+    \licensedthesis
     \tableofcontents
     \cleardoublepage
     \pagestyle{headings}
