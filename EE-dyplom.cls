@@ -1,30 +1,34 @@
 % -------------------------------------------------------------------
 % Licencja szablonu: CC-BY 4.0
 % https://creativecommons.org/licenses/by/4.0/
-% Autor: Łukasz Makowski <lukasz.makowski@ee.pw.edu.pl>
+% Autor: Łukasz Makowski <lukasz.makowski.ee@pw.edu.pl>
 % https://github.com/SP5LMA/EE-dyplom
 % -------------------------------------------------------------------
-% Szablon prac dyplomowych na Wydziale Elektrycznym PW,
-% zgodny z Zarządzeniami JM Rektora PW:
-% 24/2016, 43/2016, 57/2016.
+%
+% Szablon prac dyplomowych na Wydziale Elektrycznym PW, zgodny z Zarządzeniami JM Rektora PW: 
+% 24/2016, 43/2016, 57/2016 oraz 109/2021.
+%
 % Większość opcji ustawiona zgodnie z zaleceniami.
 % Główne różnice - dla poprawy czytelności pracy:
+%
 %   * zwiększone światło międzywierszowe (1.46557 zamiast 1.15)
 %   * wyróżniające się nagłówki rozdziałów
-%   * kolorowe, klikalne odnośniki
+%   * wyróżnione kolorem, klikalne odnośniki
+%
 % Możesz edytować ten plik, jeśli Cię to nie przeraża ;)
+%
 % -------------------------------------------------------------------
 % Dziękuję innym Autorom, na których szablonach mogłem się wzorować:
 % prof. dr hab. inż. Jacek Starzyński, Wydział Elektryczny, PW
 % Artur M. Brodzki i Piotr Woźniak, Wydział EiTI, PW
 % -------------------------------------------------------------------
-
+%
 % -------------------------------------------------------------------
 % Wymagane: druk dwustronny (twoside, openright) na A4
 % Zalecane: stopień pisma 11 pt
 % -------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{EE-dyplom}[2020/12/24 Praca dyplomowa na Wydziale Elektrycznym PW]
+\ProvidesClass{EE-dyplom}[2022/01/26 Praca dyplomowa na Wydziale Elektrycznym PW]
 
 \LoadClass[a4paper,11pt,twoside,openright]{book}
 % Alternatywnie: 12 pt
