@@ -12,11 +12,14 @@ Większość opcji ustawiona zgodnie z zaleceniami. Główne różnice - dla pop
 
 ## Użycie szablonu w Overleaf
 
-  * Wersja stabilna tego szablonu udostępniona jest w prostym edytorze online - [Overleaf](https://www.overleaf.com/latex/templates/ee-dyplom/qtrkhzdfcfvv).
-  * Wystarczy założyć darmowe konto, otworzyć szablon i można pracę edytować w przeglądarce.
-  * Nie ma konieczności instalowania czegokolwiek dodatkowego.
-  * Plik może edytować w tym samym momencie więcej niż jedna osoba - możliwość pracy grupowej Promotora i Studenta.
-  * Łatwo pobrać plik PDF i paczkę ZIP z aktualnym stanem pracy.
+  * Dzięki [Overleaf](https://www.overleaf.com/), gdzie wystarczy założyć darmowe konto, można pracę dyplomową edytować w przeglądarce.
+  * Nie ma konieczności instalowania czegokolwiek dodatkowego aby skorzystać z możliwości LaTeXa.
+  * Zawartość pracy może edytować w tym samym momencie więcej niż jedna osoba. Daje to możliwość pracy grupowej Promotora i Studenta.
+  * Z Overleaf łatwo pobrać wynikowy plik PDF i paczkę ZIP z aktualnym stanem pracy.
+  * Wersja stabilna tego szablonu jest udostępniona w Overleaf jako [template](https://www.overleaf.com/latex/templates/ee-dyplom/qtrkhzdfcfvv).
+  * Wersja szablonu udostępniania jako *template* w Overleaf może być nieaktualna względem wersji z Github ze względu na opóźnienie aktualizacji szablonów przez Overleaf i robioną tam ręcznie weryfikację zawartości plików. Może przez to być niezgodna z obowiązującymi wymogami edytorskimi.
+  * Najnowsza wersja opublikowana i wersje rozwojowe szablonu znajdują się na [Github](https://github.com/SP5LMA/EE-dyplom).
+  * Szablon z Github można pobrać i wgrać go w samodzielnie utworzony projekt na Overleaf.
 
 ## Użycie szablonu - pierwsze kroki
 
