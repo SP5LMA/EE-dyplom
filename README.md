@@ -1,3 +1,5 @@
+![Przykładowa strona tytułowa](./EE-dyplom.jpg)
+
 ## O szablonie
 
 Szablon prac dyplomowych na Wydziale Elektrycznym PW, zgodny z Zarządzeniami JM Rektora PW: 24/2016, 43/2016, 57/2016 oraz 109/2021.
