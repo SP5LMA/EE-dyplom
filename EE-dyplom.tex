@@ -1,42 +1,57 @@
-% ---------------------------------------------
-% Szablon prac dyplomowych na Wydziale Elektrycznym PW,
-% zgodny z Zarządzeniami JM Rektora PW:
-% 24/2016, 43/2016, 57/2016.
-% Większość opcji ustawiona zgodnie z zaleceniami.
-% Główne różnice - dla poprawy czytelności pracy:
-%   * stopień pisma 12 pt (zamiast 11 pt)
-%   * zwiększone światło międzywierszowe
-%   * wyróżniające się nagłówki rozdziałów
-%   * wyróżnione kolorem, klikalne odnośniki
-%
-% Jak używać szablonu:
-% 1) Szablon jest przygotowany dla XeLaTeX więc jeśli używasz
-% Overleaf to otwórz "Menu" i zmień "Compiler" na "XeLaTeX".
-% 2) ustaw niżej właściwy typ pracy w linii "documentclass"
-% wybierając dla "thesis" jedną opcję z: inz, mgr, bsc, msc
-% 3) spersonalizuj pola w pliku "config.tex"
-% 4) modyfikuj, zmieniaj i dodawaj treść w katalogu "tekst"
-% 5) dodawaj rysunki w katalogu "rysunki" (gfx raczej nie używaj)
-%
-% Dziękuję innym Autorom, których szablonami mogłem się inspirować:
-% prof. dr hab. inż. Jacek Starzyński, Wydział Elektryczny, PW
-% Artur M. Brodzki i Piotr Woźniak, Wydział EiTI, PW
-%
-% Licencja szablonu: CC-BY 4.0
-% https://creativecommons.org/licenses/by/4.0/
-% Autor: Łukasz Makowski <lukasz.makowski@ee.pw.edu.pl>
-% https://github.com/SP5LMA/EE-dyplom
-% ---------------------------------------------
+% !TEX program = xelatex
+% !TeX encoding = utf8
+% !TeX spellcheck = pl-PL
 
-% Wybierz rodzaj pracy dyplomowej
-% Pick thesis type
-\documentclass[thesis=bsc,faculty=ee]{EE-dyplom} % thesis=[inz|mgr|bsc|msc]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wybierz rodzaj pracy dyplomowej oraz wydział
+% Pick thesis type and faculty
+\documentclass[thesis=inz,faculty=ee]{EE-dyplom} 
+% thesis=[inz|mgr|bsc|msc]
+% Skróty nazw wydziałów zgodne z domenami internetowymi
+% Abbreviations of Faculties according to Internet domains
+% faculty=[
+%	arch,
+%	gik,
+%	ee,
+%	wip
+%	]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Konfiguracja - do personalizacji
 % Configuration - to be personalized
-\input{config}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\instytut{Instytut Badawczy Zjednoczonych Przedsiębiorstw Elektronowych}
+\kierunek{Mechaneurystyka}
+\specjalnosc{Rzeczowidztwo}
+\title{Telechroniczna Optymalizacja Historii~Powszechnej~Hyperputerem}
+\engtitle{Telechronic Optimization of~Universal~History Using~Hyperputer}
+\album{210912}
+\author{inż. Ijon Tichy}
+\promotor{prof. dr hab. inż. Astral Sternu Tarantoga}
+\date{2077}
+\longdate{2077-07-27}
+\grantlicense{TRUE} % [TRUE|FALSE]
 
+\streszczeniepracy{
+To jest streszczenie. To jest trochę za krótkie, jako że powinno zająć całą stronę.
+
+\lipsum[1-4]
+} % koniec streszczenia
+
+\slowakluczowe{A, B, C}
+
+\thesisabstract{
+This is abstract. This one is a little too short as it should occupy the whole page.
+
+\lipsum[1-4]
+} % end of abstract
+
+\thesiskeywords{X, Y, Z}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Tu zaczyna się dokument
 % Here is the beginning of the document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
     % Strony nagłówkowe
     % Headers
@@ -62,3 +77,5 @@
     % Załączniki (plik appendices.tex)
     \easyappendices
 \end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
