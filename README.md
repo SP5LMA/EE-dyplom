@@ -24,6 +24,9 @@ Większość opcji ustawiona zgodnie z zaleceniami. Główne różnice - dla pop
 4. Modyfikuj, zmieniaj i dodawaj treść w katalogu **tekst**
 5. Dodawaj rysunki w katalogu **rysunki** (gfx raczej nie używaj)
 
+## Znane problemy
+
+  * Szablon tylko dla prac jednoautorskich
 
 ## Podziękowania
 
