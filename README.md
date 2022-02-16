@@ -4,7 +4,7 @@
 
 Szablon prac dyplomowych na Wydziale Elektrycznym PW, zgodny z Zarządzeniami JM Rektora PW: 24/2016, 43/2016, 57/2016 oraz 109/2021.
 
-Większość opcji ustawiona zgodnie z zaleceniami. Główne różnice - dla poprawy czytelności pracy:
+Większość opcji ustawiona zgodnie z zaleceniami opisanymi w Zarządzeniach. Wszystkie różnice są w ramach dopuszczalnych zakresów ingerencji w styl. Dla poprawy czytelności pracy:
 
   * zwiększone światło międzywierszowe
   * wyróżniające się nagłówki rozdziałów
@@ -23,13 +23,26 @@ Większość opcji ustawiona zgodnie z zaleceniami. Główne różnice - dla pop
 
 ## Użycie szablonu - pierwsze kroki
 
-1. Szablon jest przygotowany dla XeLaTeX więc jeśli używasz Overleaf to otwórz "Menu" i zmień "Compiler" na "XeLaTeX", gdyż domyślnie wybrany jest inny. Kompilacja za pomocą pdflatex była testowana i jest możliwa ale niewskazana
+1. Szablon jest przygotowany dla XeLaTeX więc jeśli używasz Overleaf to otwórz "Menu" i zmień "Compiler" na "XeLaTeX", gdyż domyślnie wybrany jest inny. Kompilacja za pomocą pdfLaTeX była testowana i jest możliwa ale niewskazana
 2. Otwórz plik **EE-dyplom.tex** i ustaw właściwy typ swej pracy w linii **documentclass** wybierając dla zmiennej **thesis** jedną opcję spośród: **inz**, **mgr**, **bsc**, **msc**
 3. Spersonalizuj pozostałe pola w pliku **EE-dyplom.tex**
 4. Modyfikuj, zmieniaj i dodawaj treść w katalogu **tekst**
 5. Dodawaj rysunki w katalogu **rysunki** (gfx raczej nie używaj)
 
-## Znane problemy
+## Zgłaszanie problemów
+
+Z góry dziękuję za zgłaszanie zauważonych problemów i błędów, które
+można przekazać mailem na adres: <lukasz.makowski.ee@pw.edu.pl>.
+
+Zgłaszając problem proszę podaj:
+
+1. Opis problemu
+2. Używany system operacyjny
+3. Używane oprogramowanie do edycji plików źródłowych
+4. Używany kompilator LaTeXa (np.: XeLaTeX, pdfLaTeX)
+5. Pozostałe, istotne aspekty konfiguracji (np.: strona kodowa).
+
+## Znane problemy przewidziane do rozwiązania
 
   * Szablon tylko dla prac jednoautorskich
 
