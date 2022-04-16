@@ -2,13 +2,17 @@
 
 ## O szablonie
 
-Szablon prac dyplomowych na Wydziale Elektrycznym PW, zgodny z Zarządzeniami JM Rektora PW: 24/2016, 43/2016, 57/2016 oraz 109/2021.
+Szablon prac dyplomowych na Wydziale Elektrycznym PW, zgodny z obowiązującymi Zarządzeniami JM Rektora PW: 57/2016, 42/2020, 109/2021, 3/2022 oraz 4/2022.
+
+Wszystkie zasady "wymagane" są spełnione.
 
 Większość opcji ustawiona zgodnie z zaleceniami opisanymi w Zarządzeniach. Wszystkie różnice są w ramach dopuszczalnych zakresów ingerencji w styl. Dla poprawy czytelności pracy:
 
   * zwiększone światło międzywierszowe
   * wyróżniające się nagłówki rozdziałów
   * wyróżnione kolorem, klikalne odnośniki
+
+Szablon jest tylko dla prac jednoautorskich, zgodnie z obowiązującymi wymaganiami redakcyjnymi.
 
 ## Użycie szablonu w Overleaf
 
@@ -23,7 +27,7 @@ Większość opcji ustawiona zgodnie z zaleceniami opisanymi w Zarządzeniach. W
 
 ## Użycie szablonu - pierwsze kroki
 
-1. Szablon jest przygotowany dla XeLaTeX więc jeśli używasz Overleaf to otwórz "Menu" i zmień "Compiler" na "XeLaTeX", gdyż domyślnie wybrany jest inny. Kompilacja za pomocą pdfLaTeX była testowana i jest możliwa ale niewskazana
+1. Szablon jest przygotowany dla XeLaTeX więc jeśli używasz Overleaf to otwórz "Menu" i zmień "Compiler" na "XeLaTeX", gdyż domyślnie wybrany jest inny. Kompilacja za pomocą pdfLaTeX była testowana i jest możliwa ale jest niewskazana. Do "ręcznej" kompilacji bibliografii należy wykorzystać biber.
 2. Otwórz plik **EE-dyplom.tex** i ustaw właściwy typ swej pracy w linii **documentclass** wybierając dla zmiennej **thesis** jedną opcję spośród: **inz**, **mgr**, **bsc**, **msc**
 3. Spersonalizuj pozostałe pola w pliku **EE-dyplom.tex**
 4. Modyfikuj, zmieniaj i dodawaj treść w katalogu **tekst**
@@ -38,13 +42,10 @@ Zgłaszając problem proszę podaj:
 
 1. Opis problemu
 2. Używany system operacyjny
-3. Używane oprogramowanie do edycji plików źródłowych
+3. Używane oprogramowanie do edycji plików źródłowych (np.: Kile, Vim)
 4. Używany kompilator LaTeXa (np.: XeLaTeX, pdfLaTeX)
 5. Pozostałe, istotne aspekty konfiguracji (np.: strona kodowa).
 
-## Znane problemy przewidziane do rozwiązania
-
-  * Szablon tylko dla prac jednoautorskich
 
 ## Podziękowania
 
