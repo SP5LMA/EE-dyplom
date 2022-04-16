@@ -571,17 +571,7 @@ Można też samodzielnie wybrać jaką formę ma przybrać akronim w~tekście, c
 
 Chociaż na powyższej liście występuje \gls{PW} to tutaj akronim jest traktowany jak pojawiający się po raz pierwszy. Dopiero kolejne użycie daje inny efekt: \gls{PW}.
 
-W Overleaf wykorzystanie wykazu symboli matematycznych okazuje się sprawiać problemy -- indeks nie odświeża się. Dlatego w~pliku~\href{./EE-dyplom.cls}{EE-dyplom.cls} zakomentowana jest linia generująca listę symboli:
-\begin{lstlisting}[language=TeX,
-    numbers=none,
-    caption=EE-dyplom.cls,
-    label={lst:EE-dyplom}]
-%    \printglossary[type=\acronymtype,title={}] % nie w Overleaf
-%    \printglossary[type=symbols,title={}] % nie w Overleaf
-\end{lstlisting}
-Po pobraniu szablonu i~kompilacji lokalnej z~użyciem metody przedstawionej niżej, nie ma tego problemu i~linię można odkomentować, aby uzyskać ładną listę symboli.
-
-Chcąc kompilować w~Overleaf a~zarazem mieć listę symboli, to niestety trzeba stworzyć ją ręcznie w~pliku \href{./symbols.tex}{symbols.tex}. Plik może zostać pusty ale musi istnieć.
+W Overleaf wykorzystanie wykazu symboli matematycznych okazuje się sprawiać problemy -- indeks nie odświeża się automatycznie wtedy, gdy powinien. Żeby zmusić Overleaf do odświeżenia listy symboli i~akronimów, należy z~rozwijanego menu przy zielonym przycisku ,,Recompile'' wybrać opcję ,,Recompile from scratch''. Trwa to nieco dłużej ale spełnia swoją rolę.
 
 Przykład użycia symbolu natężenia prądu elektrycznego~\gls{symb:I}. Jedną z~ciekawszych liczb jest~\gls{symb:Pi}. Tak użyte symbole przy prawidłowej kompilacji pliku \texttt{PDF} znajdą się na indeksowanej liście a~więc będzie można znaleźć miejsca ich użycia w~pracy. Oczywiście to indeksowanie zadziała tylko wtedy, gdy odwołamy się do symbolu w~przedstawiony sposób.
 
