@@ -1,5 +1,7 @@
 ![Przykładowa strona tytułowa](./EE-dyplom.jpg)
 
+*[ENGLISH](README.en.md)*
+
 ## O szablonie
 
 Szablon prac dyplomowych na Wydziale Elektrycznym PW, zgodny z obowiązującymi Zarządzeniami JM Rektora PW: 57/2016, 42/2020, 109/2021, 3/2022 oraz 4/2022.
