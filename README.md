@@ -4,7 +4,7 @@
 
 ## O szablonie
 
-Szablon prac dyplomowych na Wydziale Elektrycznym PW, zgodny z obowiązującymi Zarządzeniami JM Rektora PW: 57/2016, 42/2020, 109/2021, 3/2022 oraz 4/2022.
+Szablon prac dyplomowych na Wydziale Elektrycznym PW jest zgodny z obowiązującym [Zarządzeniem JM Rektora PW 4/2022](https://www.bip.pw.edu.pl/Wewnetrzne-akty-prawne/Dokumenty-Rektora-PW/Zarzadzenia-Rektora/2022/Zarzadzenie-nr-4-2022-Rektora-PW-z-dnia-27-01-2022), dotyczącym formatowania prac dyplomowych.
 
 Wszystkie zasady "wymagane" są spełnione.
 
