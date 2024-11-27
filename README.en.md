@@ -4,7 +4,7 @@
 
 ## About template
 
-The thesis template for Faculty of Electrical Engineering at WUT conforming to Directives of WUT Rector: 57/2016, 42/2020, 109/2021, 3/2022 and 4/2022.
+The thesis template for Faculty of Electrical Engineering at WUT conforming to [WUT Rector Directive 4/2022](https://www.bip.pw.edu.pl/Wewnetrzne-akty-prawne/Dokumenty-Rektora-PW/Zarzadzenia-Rektora/2022/Zarzadzenie-nr-4-2022-Rektora-PW-z-dnia-27-01-2022) (in Polish).
 
 All "must have" regulations are fulfilled.
 
