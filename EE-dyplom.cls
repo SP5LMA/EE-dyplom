@@ -296,8 +296,8 @@
 %            font=footnotesize, justification=RaggedRight]
 %        {caption}
 % Alternatywnie: 10 pt gdy główny to 11 pt i 11 pt gdy główny to 12 pt
-\RequirePackage[format=plain, labelfont=bf, labelsep=period,
-            font=small, justification=justified]
+\RequirePackage[format=hang, labelfont=bf, labelsep=period,
+            font=small, justification=raggedright,singlelinecheck=true]
         {caption}
 \RequirePackage{subcaption}
 
