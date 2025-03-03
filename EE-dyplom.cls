@@ -245,7 +245,8 @@
 % -------------------------------------------------------------------
 \RequirePackage[backend=biber,
         style=ieee,     % styl numeryczny IEEE prawie jak PN
-        sorting=nyt,    % sortowanie spisu po nazwiskach
+%        sorting=nyt,    % sortowanie spisu po nazwiskach
+        sorting=none,    % ze względu na popularne żądanie
         citestyle=numeric-comp % kompaktowe odnośniki numeryczne typu [21-23]
     ]{biblatex}
 \addbibresource{EE-dyplom.bib}
