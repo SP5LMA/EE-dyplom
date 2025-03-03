@@ -29,7 +29,7 @@
 % ----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{EE-dyplom}[2022/01/26 Praca dyplomowa na Wydziale Elektrycznym PW]
+\ProvidesClass{EE-dyplom}[2026/03/03 Praca dyplomowa na Politechnice Warszawskiej]
 
 \LoadClass[a4paper,11pt,twoside,openright]{book}
 % Alternatywnie: 12 pt
@@ -132,16 +132,16 @@
     \fi
     \setotherlanguage{polish}
     \setotherlanguage{english}
-    \setotherlanguage{latin}
+    %\setotherlanguage{latin}
     %\selectlanguage{english}
     %\selectlanguage{polish}
 \else
     \RequirePackage[MeX]{polski}
     \ifnum\strcmp{\locallang}{PL} = 0 
-        \RequirePackage[latin,english,polish]{babel}
+        \RequirePackage[english,polish]{babel}
         \selectlanguage{polish}
     \else
-        \RequirePackage[latin,polish,english]{babel}
+        \RequirePackage[polish,english]{babel}
         \selectlanguage{english}
     \fi
     \RequirePackage[utf8]{inputenc}
@@ -359,8 +359,8 @@
 % -------------------------------------------------------------------
 % Wypełniacze do testowania typografii
 % -------------------------------------------------------------------
-\RequirePackage{lipsum}
-\RequirePackage{bredzenie}
+%\RequirePackage{lipsum}
+%\RequirePackage{bredzenie}
 
 % -------------------------------------------------------------------
 % Formatowanie tabel
