@@ -421,10 +421,10 @@
 % -------------------------------------------------------------------
 \RequirePackage{listings}
 \lstdefinestyle{EEStyle}{
-    backgroundcolor=\color{white},
+	backgroundcolor=\color{gray!3!white},
     commentstyle=\color{EEBlueDark},
     keywordstyle=\bfseries\color{EEUltramarine},
-    numberstyle=\tiny\color{EEBlue},
+    numberstyle=\tiny\color{EEBlueDark},
     stringstyle=\color{EETangerine},
     basicstyle=\ttfamily\small,
     breakatwhitespace=false,
@@ -435,13 +435,16 @@
     firstnumber=1, % 2
     stepnumber=1,  % 5
     numbersep=5pt,
+    xleftmargin=4ex,frame=single,framexleftmargin=0ex,
     showspaces=false,
     showstringspaces=false,
     showtabs=false,
     tabsize=2,
-    frame=lB,
-    frameround=tttt,
-    inputpath=src
+    frame=lrbt,
+    frameround=ffff,
+    inputpath=src,
+    aboveskip=1.46557em,
+    belowskip=1em
 }
 \lstset{style=EEStyle}
 
