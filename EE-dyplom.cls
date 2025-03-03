@@ -1,7 +1,6 @@
 % ----------------------------------------------------------------------------
 % Szablon prac dyplomowych na Wydziale Elektrycznym PW, zgodny z obowiązującymi
-% Zarządzeniami JM Rektora PW:
-% 57/2016, 42/2020, 109/2021, 3/2022 oraz 4/2022.
+% Zarządzeniem JM Rektora PW 4/2022.
 % ----------------------------------------------------------------------------
 % Spełnione wszystkie zasady wymagane:
 %  - druk dwustronny (twoside, openright) na A4
@@ -508,17 +507,6 @@
 % -------------------------------------------------------------------
 % Standardowo zgodne z zaleceniami
 
-% -------------------------------------------------------------------
-% W celu umieszczenia PDF z "Oświadczeniami"
-% -------------------------------------------------------------------
-\RequirePackage{tikz}
-%\RequirePackage[absolute,overlay]{textpos}
-
-\newcommand{\grantlicense}[1]{
-    \newcommand{\@grantlicense}{#1}
-}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -687,103 +675,6 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Oświadczenia o autorstwie
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\authorship}{
-    \ifnum\strcmp{\locallang}{PL} = 0 % wersja polska
-        \begin{tikzpicture}[remember picture, overlay]
-            \node [anchor=north west, inner sep=0pt] at (current page.north west)
-            {{\includegraphics[width=\paperwidth]{gfx/oswiadczeniePL-2021-109.pdf}};};
-            \node[anchor=north west, inner sep=0pt] at(10.4, -1.1) {Warszawa \@longdate};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -2.3) {\@author};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -3.6) {\@album};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -4.8) {\@kierunek};
-            \node[anchor=north east, inner sep=0pt] at(13.8, -14.6) {\@author};
-        \end{tikzpicture}
-	\clearpage
-    \else % wersja angielska
-        \begin{tikzpicture}[remember picture, overlay]
-            \node [anchor=north west, inner sep=0pt] at (current page.north west)
-            {{\includegraphics[width=\paperwidth]{gfx/oswiadczenieEN-2021-109.pdf}};};
-            \node[anchor=north west, inner sep=0pt] at(10.4, -1.4) {Warszawa \@longdate};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -2.6) {\@author};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -3.9) {\@album};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -5.2) {\@kierunek};
-            \node[anchor=north east, inner sep=0pt] at(13.8, -19.6) {\@author};
-        \end{tikzpicture}
-	\clearpage
-    \fi    
-    \cleardoublepage
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Oświadczenia o licencji
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\licensedthesis}{
-    \ifnum\strcmp{\locallang}{PL} = 0 % wersja polska
-        \begin{tikzpicture}[remember picture, overlay]
-            \node [anchor=north west, inner sep=0pt] at (current page.north west)
-            {{\includegraphics[width=\paperwidth]{gfx/licencjaPL-2021-109.pdf}};};
-            \node[anchor=north east, inner sep=0pt] at(15.5, -1.3) {Warszawa \@longdate};
-            \node[anchor=north west, inner sep=0pt] at(-1.2, -2.1) {\@author};
-            \node[anchor=north west, inner sep=0pt] at(-1.2, -2.95) {\@album};
-            \node[anchor=north west, inner sep=0pt] at(-1.2, -3.75) {\@kierunek};
-            \node[anchor=north east, inner sep=0pt] at(15.5, -13.3) {\@author};
-		\node[anchor=south west, inner sep=0pt] at(9.1, -8.85) {\resizebox*{7cm}{1em}{\@title}};
-        \end{tikzpicture}
-	% przekreślenia w wersji polskiej
-	% skreślenie "współautora" - TODO: prace wieloautorskie
-	\begin{tikzpicture}[remember picture, overlay]
-		\draw[thick] (3.1,-8.8) -- (4.7,-8.8);
-	\end{tikzpicture}
-	% skreślenia nieudzielenia licencji
-	\ifnum\strcmp{\@grantlicense}{TRUE} = 0
-	\begin{tikzpicture}[remember picture, overlay]
-		\draw[thick] (-.2,-9.25) -- (1.8,-9.25);
-	\end{tikzpicture}
-	\else % skreślenia udzielenia licencji XD
-	\begin{tikzpicture}[remember picture, overlay]
-		\draw[thick] (-1.7,-9.25) -- (-.4,-9.25);
-	\end{tikzpicture}
-	\fi
-	\clearpage
-    \else % wersja angielska
-        % podstawowe dane w wersji angielskiej
-        \begin{tikzpicture}[remember picture, overlay]
-            \node [anchor=north west, inner sep=0pt] at (current page.north west)
-            {{\includegraphics[width=\paperwidth]{gfx/licencjaEN-2021-109.pdf}};};
-            \node[anchor=north west, inner sep=0pt] at(11.4, -1.7) {Warszawa \@longdate};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -2.95) {\@author};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -4.21) {\@album};
-            \node[anchor=north west, inner sep=0pt] at(-0.8, -5.45) {\@kierunek};
-            \node[anchor=north east, inner sep=0pt] at(14.9, -19.5) {\@author};
-		\node[anchor=south west, inner sep=0pt] at(9.4, -11.7) {\resizebox*{7cm}{1em}{\@title}};
-		\node[anchor=south west, inner sep=0pt] at(10.2, -13.95) {\resizebox*{1.5cm}{1em}{\@engtitle}};
-        \end{tikzpicture}
-	% przekreślenia w wersji angielskiej
-	% skreślenie "współautora" - TODO: prace wieloautorskie
-	\begin{tikzpicture}[remember picture, overlay]
-		\draw[thick] (3.5,-11.6) -- (5.3,-11.6);
-		\draw[thick] (3.9,-13.8) -- (5.4,-13.8);
-	\end{tikzpicture}
-	% skreślenia nieudzielenia licencji
-	\ifnum\strcmp{\@grantlicense}{TRUE} = 0
-	\begin{tikzpicture}[remember picture, overlay]
-		\draw[thick] (.2,-12.05) -- (2.6,-12.05);
-		\draw[thick] (12.8,-13.8) -- (14.6,-13.8);
-	\end{tikzpicture}
-	\else % skreślenia udzielenia licencji XD
-	\begin{tikzpicture}[remember picture, overlay]
-		\draw[thick] (-1.3,-12.05) -- (.1,-12.05);
-		\draw[thick] (11.9,-13.8) -- (12.7,-13.8);
-	\end{tikzpicture}
-	\fi
-	\clearpage
-    \fi % koniec wersji angielskiej
-    \cleardoublepage
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Jedno polecenie - kombajn stron początkowych
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}} 
@@ -839,20 +730,4 @@
     \addcontentsline{toc}{chapter}{\appendiceslisttitle}
     \@starttoc{app}
     \input{appendices}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Jedno polecenie - kombajn stron końcowych (bez bibliografii)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\tailpages}{
-    % wykaz symboli i skrótów
-    \acronymslist
-
-    % spis rysunków
-    \listoffigures
-
-    % spis tabel
-    \listoftables
-
-    \easyappendices
 }
