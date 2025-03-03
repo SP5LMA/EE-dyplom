@@ -99,14 +99,10 @@
 %\RequirePackage[version=4]{mhchem}
 \ifXeTeX
     \RequirePackage{mathspec} % wczytuje również fontspec
-    \setmainfont{Latin Modern Roman}
-    \setromanfont{Latin Modern Roman}
-    \setsansfont{Latin Modern Sans}
-    \setmonofont{Latin Modern Mono}
-    \setmathrm{Latin Modern Math}
-    \setmathfont(Digits,Latin)[Scale=MatchLowercase]{Latin Modern Math}
+	\usepackage[default,oldstyle]{sourcesanspro}
 \else
-    \RequirePackage{lmodern}
+%    \RequirePackage{lmodern}
+    \usepackage[default]{sourcesanspro}
     \renewcommand*\familydefault{\sfdefault}
     \RequirePackage[T1]{fontenc}
 \fi
