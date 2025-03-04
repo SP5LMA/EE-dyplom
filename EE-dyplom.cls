@@ -74,7 +74,7 @@
 \RequirePackage[acronym,symbols,nopostdot]{glossaries}
 \setglossarysection{section}
 \makeglossaries
-\loadglsentries{glossary}
+\loadglsentries{tekst/glossary}
 \ifnum\strcmp{\locallang}{PL} = 0 
     \newcommand{\acronymstitle}{Wykaz skrótów i symboli}
 \else
@@ -706,7 +706,7 @@
     \printglossary[type=\acronymtype,title={}]
     \printglossary[type=symbols,title={}]
     % Alternatywna lista symboli - do użycia tylko w Overleaf
-    %\input{symbols}
+    %\input{tekst/symbols}
 }   %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -729,5 +729,5 @@
     \chapter*{\appendiceslisttitle}
     \addcontentsline{toc}{chapter}{\appendiceslisttitle}
     \@starttoc{app}
-    \input{appendices}
+    \input{tekst/appendices}
 }

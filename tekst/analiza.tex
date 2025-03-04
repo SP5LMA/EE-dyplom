@@ -1,0 +1,69 @@
+\chapter{Telechronika stosowana}
+
+Rozdział kolejny po ,,Wstępie'' zawiera podstawy teoretyczne, czyli informacje znane specjalistom i dostępne w literaturze przed rozpoczęciem realizacji danej pracy dyplomowej. Tytuły rozdziałów i podrozdziałów muszą być konkretne i bezpośrednio powiązane z tematem pracy dyplomowej.
+
+Między tytułem rozdziału a podrozdziału musi być choćby krótki tekst. Może to być na przykład ogólne wprowadzenie czytelnika w ten rozdział.
+
+\section{Podstawy psioniczne telechroniki}
+
+Należy krótko opisać podstawy teoretyczne podejmowanego zagadnienia. W tym celu trzeba powoływać się na literaturę -- książki, artykuły z czasopism specjalistycznych i branżowych oraz dokumenty techniczne takie jak patenty i standardy.
+
+Płatne serwisy udostępniające takie materiały są dostępne dla pracowników i studentów PW dzięki \href{https://bg.pw.edu.pl/}{Bibliotece Głównej PW}, po zalogowaniu kontem bibliotecznym. Warte polecenia:
+
+\begin{itemize}
+	\item \href{http://eczyt.bg.pw.edu.pl/han/SpringerLink}{SpringerLink}
+	\item \href{http://eczyt.bg.pw.edu.pl/han/Wiley}{Wiley Online Library}
+	\item \href{http://eczyt.bg.pw.edu.pl/han/TaylorandFrancis}{Taylor and Francis Online}
+\end{itemize}
+
+Dodatkowe miejsca pozyskiwania wartościowych źródeł:
+
+\begin{itemize}
+	\item \href{https://www.nist.gov/}{National Institute of Standards and Technology}
+	\item \href{https://www.etsi.org/}{European Telecommunications Standards Institute}
+	\item \href{https://www.uspto.gov/}{United States Patent and Trademark Office}
+	\item \href{https://www.epo.org/en}{European Patent Office}
+	\item \href{https://patents.google.com/}{Google Patents}
+\end{itemize}
+
+\section{Przegląd stanu wiedzy}
+
+Przegląd \underline{aktualnych}\footnote{Aktualne publikacje naukowe to, w zależności od zagadnienia, kilka do kilkunastu lat wstecz.} badań w danej dziedzinie oparty o artykuły z czasopism naukowych i specjalistycznych. Polecane źródła:
+
+\begin{itemize}
+	\item \href{http://eczyt.bg.pw.edu.pl/han/ieee-import/}{IEEE}
+	\item \href{http://eczyt.bg.pw.edu.pl/han/ScienceDirectOnLine}{Science Direct}
+	\item \href{http://eczyt.bg.pw.edu.pl/han/ACMDigitalLibrary}{ACM}
+	\item \href{https://pubmed.ncbi.nlm.nih.gov/}{NIH PubMed}
+	\item \href{https://www.mdpi.com/}{MDPI}
+	\item \href{https://arxiv.org/}{arXiv}
+	\item \href{https://hal.science/}{Hyper Articles en Ligne}
+\end{itemize}
+
+Analiza literatury to nie jest zbiór przypadkowych ,,pozycji bibliograficznych'' z wyszukiwarki internetowej! Musi ona:
+
+\begin{itemize}
+	\item ściśle wiązać się z tematem pracy,
+	\item poziomem złożoności odpowiadać zakresowi pracy dyplomowej, 
+	\item kierować tekst pracy na drodze ,,od ogółu do szczegółu'' w stronę rozdziału następnego, czyli do realizacji części ,,autorskiej''.
+\end{itemize}
+
+Praca magisterska ze względu na konieczny w niej ,,wątek badawczy'' powinna bazować na szerszym zakresie literatury, która nie tylko zostanie omówiona ale również poddana krytycznej analizie.
+
+Oto przykładowe odwołanie do literatury~\cite{fowler2009}. Chcąc odnieść się do kilku pozycji jednocześnie, trzeba ich znaczniki wpisać po przecinku~\cite{maxwell1865,leksinski1995}. Można też odnieść się do konkretnej strony~\cite[s.~38]{leksinski1995}. 
+
+Znak tyldy przed wywołaniem \texttt{cite} ,,skleja'' odnośnik z~poprzedzającym je słowem za pomocą tak zwanej ,,twardej'' spacji. Kropka kończąca zdanie znajduje się za odnośnikiem bibliograficznym. Jest to prawidłowe odwołanie do bibliografii.
+
+Znacznik ,,fowler2009'', ,,maxwell1865'' i tak dalej to identyfikatory pozycji bibliograficznych. Przekształceniem identyfikatorów na konkretne numery zajmuje się \LaTeX{}. Noty bibliograficzne z~ich identyfikatorami muszą znajdować się w~osobnym pliku \texttt{EE-dyplom.bib}. Każda zmiana pliku z~bibliografią wymaga jego rekompilacji. W~tym szablonie stosowany jest do tego program Biber. Zatem kompilacja jest w trzech krokach:
+\begin{itemize}
+	\item kompilacja pliku(-ów) *.tex -- rozpoznanie potrzebnych identyfikatorów not bibliograficznych,
+	\item kompilacja pliku *.bib -- wydzielenie i sformatowanie potrzebnych not bibliograficznych,
+	\item kompilacja pliku(-ów) *.tex -- podstawienie numerów pod identyfikatory i dołączenie bibliografii.
+\end{itemize}
+W~Overleaf i wielu programach te trzy kroki są skonsolidowane i mogą nie być widoczne. 
+
+Noty bibliograficzne pojawią się w bibliografii tylko wtedy, gdy chociaż raz zostaną użyte w tekście. Dlatego w pliku \texttt{EE-dyplom.bib} można przygotować sobie bibliografię ,,na zapas''.
+
+Ułatwieniem może być to, że serwisy takie jak IEEE Xplore pozwalają na pobranie cytowania w~postaci BibTeX. Nie do końca prawidłowo wypełniają i~używają pola bibliograficzne ale mamy pewność, że składnia w pliku \texttt{EE-dyplom.bib} jest poprawna. Inne serwisy gromadzące publikacje zazwyczaj mają podobne funkcje.
+
+W tym szablonie noty bibliograficzne są sortowane w kolejności ich przywołania w tekście. Czyli w treści ,,numerki'' pierwszych odwołań do bibliografii będą pojawiały się po kolei i będą zgodne z numeracją w bibliografii, i dzieje się to automatycznie.

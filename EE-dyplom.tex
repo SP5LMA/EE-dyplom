@@ -38,14 +38,14 @@
 \date{2077}
 \longdate{2077-07-27}
 
-%\grantlicense{TRUE} % [TRUE|FALSE]
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Streszczenie pracy i abstract.
 % In case of thesis in English swap the order - English version goes first.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \streszczeniepracy{
 To jest streszczenie. To jest trochę za krótkie, jako że powinno zająć całą stronę.
+
+Streszczenie to nie to samo co wstęp. Streszczenie przedstawia informacje o tym, co się znajduje w tekście poszczególnych rozdziałów danej pracy podczas gdy ,,Wstęp'' służy przedstawieniu zagadnienia podjętego w pracy.
 
 } % koniec streszczenia
 
@@ -54,6 +54,7 @@ To jest streszczenie. To jest trochę za krótkie, jako że powinno zająć cał
 \thesisabstract{
 This is abstract. This one is a little too short as it should occupy the whole page.
 
+An abstract is not the same as an introduction. The abstract provides information about what is contained in the text of specific chapters of a given work, whereas the introduction serves to present the topic addressed in the work.
 } % end of abstract
 
 \thesiskeywords{X, Y, Z}
@@ -63,16 +64,20 @@ This is abstract. This one is a little too short as it should occupy the whole p
 % Here is the beginning of the document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-    % Strony nagłówkowe
-    % Headers
+    % Strony nagłówkowe - musi być
+    % Headers - must exist
     \frontpages
+    
+    % Tekst pracy - osobne pliki do edycji
+    % Thesis text - separate files for edition
 
-    % Właściwa treść jest w pliku tekst/main.tex
-    % Real contents is in tekst/main.tex
-    \input{tekst/main}
+	\input{tekst/wstep}
+	\input{tekst/analiza}
+	\input{tekst/realizacja}
+	\input{tekst/podsumowanie}
 
-    % Bibliografia - musi być
-    % Bibliography - must exist
+    % Bibliografia - musi być, jest w pliku EE-dyplom.bib
+    % Bibliography - must exist, is in the file EE-dyplom.bib
     \bibliografia
 
     % Strony końcowe - można zakomentować, jeśli zbędne

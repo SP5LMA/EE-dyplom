@@ -1,0 +1,475 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{easyappendix}{\LaTeX{} -- więcej przykładów}
+\label{app:latex}
+
+Pusta linia oznacza nowy akapit.
+Ta linia kontynuuje poprzedni akapit, chociaż w~edytorze jest odrębną linią, oddzieloną jednym ,,enterem''. Wokół rysunków, tabel, listingów również należy zostawiać puste linie.
+
+
+
+
+
+Dużo pustych linii nie skutkuje większą ilością miejsca -- nie ma tu ,,formatowania enterami       i      spacjami'', typowego dla gorszych rozwiązań.
+
+
+Strona tuż przed początkiem nowego rozdziału może zostać całkiem pusta i~nawet nie będzie mieć numeracji u~dołu. Jest to jak najbardziej prawidłowe, gdyż rozdziały mają zaczynać się od strony prawej w~druku dwustronnym a~więc od strony nieparzystej. Stron bez tekstu nie numeruje się, chociaż są one liczone.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Styl tekstu}
+W przykładowym dokumencie pojawiło się modyfikowanie wyglądu liter za pomocą kilku metod. Tu dla porządku zostaną one zebrane na jednej liście z~przykładami użycia:
+\begin{itemize}
+	\item \textbf{tekst wytłuszczony},
+	\item \textit{tekst pochylony},
+	\item \texttt{tekst maszynowy},
+	\item \underline{tekst podkreślony}
+	\item tekst \emph{wyróżniony} \textbf{odmiennym \emph{stylem}}, \textit{w zależności \emph{od sytuacji}} -- \emph{jest to \textbf{rozwiązanie} \textit{uniwersalne}}.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Wypunktowania}
+\LaTeX{} ma duże możliwości jeśli chodzi o~formatowanie wypunktowań. Jednak zgodnie z~obowiązującymi na PW zaleceniami można stosować tylko dwa rodzaje punktorów:
+\begin{itemize}
+	\item standardową ,,kropkę'' -- rozwiązanie domyślne,
+	\item[--] myślnik -- wymaga interwencji jak w tym przykładzie.
+\end{itemize}
+Zatem nie można używać wypunktowań numerycznych, list opisowych i~tak dalej. Stosowane w niniejszym dodatku polecenie \texttt{paragraph} również powinno być unikane w pracy dyplomowej gdyż wprowadza zbędne zamieszanie w strukturze pracy.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Samotne literki}
+
+W polskiej tradycji piśmienniczej pojedyncze litery nie powinny występować na końcu linii. Aby połączyć taką literę z~następującym po nim słowem należy użyć znaku tyldy \keys{\textasciitilde{}}. Dotyczyć to może liter takich jak: a, i, o, u, w, z. Problem ten może dotyczyć też wielkich liter rozpoczynających zdania, o czym czasem zdarza się zapomnieć.
+
+Pod koniec pisania pracy dobrze jest skorzystać z~opcji ,,znajdź i~zamień'' by wymienić wszystkie ciągi znaków \keys{\SPACE, znak, \SPACE} na \keys{\SPACE, znak, \textasciitilde{}}.
+
+W~tym tekście zostało to zrobione.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Dywiz a~myślnik}
+Podejście do typografii w~\LaTeX{u} jest profesjonalne co wiąże się też z~dbałością o~rozróżnienie różnych rodzajów ,,myślników'':
+\begin{itemize}
+	\item pojedynczy znak minus ,,-'' to dywiz, stosowany do:
+	\begin{itemize}
+		\item przenoszenia wyrazów do nowej linii; uwaga: nie robimy tego ręcznie!
+		\item łączenia słów (na przykład: Golub-Dobrzyń).
+	\end{itemize}
+	\item dwa znaki minus obok siebie ,,-{}-'' % tu celowo oddzielone, żeby się nie połączyły
+	to ,,prawdziwy'' myślnik (--) o~wyraźnie większej długości od dywizu -- można go stosować w~zdaniach złożonych, oddzielając spacjami od sąsiadujących z~nim wyrazów,
+	\item trzy znaki minus obok siebie praktycznie nie wystąpią w~pracach technicznych a~służą do oznaczania dialogów. --- Serio? --- Ano tak.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Tabele}
+Prostą tabelą, wprowadzoną ręcznie, jest tabela~\ref{tab:zjawiska}, która przedstawia kilka dat zjawisk astronomicznych. Tego rodzaju tabela wystarczy w~większości prac. Wygląd tabelaryczny uzyskuje się za pomocą otoczenia \texttt{tabular}. Sam wygląd tabelaryczny to jednak jeszcze nie jest tabela, tak jak zbiór komórek z~arkusza kalkulacyjnego nie jest tabelą. Aby uzyskać tabelę należy \texttt{tabular} otoczyć za pomocą środowiska \texttt{table}. Wtedy taką tabelę można opatrzyć tytułem (\texttt{caption}), koniecznie z góry i~znacznikiem (\texttt{label}) pozwalającym na odwołania do niej z~tekstu.
+
+\begin{table}[!ht]
+	\caption{\label{tab:zjawiska}Wybrane zjawiska astronomiczne z~lat 2016-2020}
+	\centering
+	\begin{tabular}{p{2.5cm}c|l}
+		Data        &   Godzina (UTC)   &   Zdarzenie\\\hline\hline
+		2016-05-09  &   14:57           &   Tranzyt Merkurego\\\hline
+		2017-08-11 --~2017-08-13  & --- &   Maksimum Perseidów \\\hline
+		2018-07-27  &   20:22           &   Całkowite zaćmienie Księżyca\\\hline
+		2019-08-24  &   17:04           &   Koniunkcja Wenus i~Mars w~odległości - 0°17`\\\hline
+		2020-12-21  &   16:00           &   Koniunkcja Jowisz i~Saturn w~odległości 0°06`
+	\end{tabular}
+\end{table}
+
+Podobnie jak dla rysunków tak i~tabelom można wskazać posadowienie za pomocą oznaczeń literowych (h, b, t) i~wykrzyknika. Umieszczenie tabeli w dole strony może kolidować z przypisem dolnym. Przypisów dolnych jednak najlepiej nie stosować wcale.
+
+ Liczbę kolumn i~ułożenie w~nich tekstu określa się jako argumenty polecenia \texttt{tabular}:
+\begin{itemize}
+	\item l -- dosunięcie do lewej,
+	\item r -- dosunięcie do prawej,
+	\item c -- centrowanie,
+	\item p -- styl akapitowy z~szerokością określoną parametrem.
+\end{itemize}
+Jeśli kolumny mają być oddzielone pionowymi liniami to między odpowiednimi literami powinna pojawić się pionowa kreska ,,|''.
+
+W kolejnych liniach treści z~poszczególnych kolumn oddziela się znakiem ,,\&''. Wiersz tabeli kończy się {\LaTeX}owym znakiem nowego wiersza czyli podwójnym ukośnikiem: ,,\textbackslash\textbackslash''. Za nim można wstawić polecenie oznaczające narysowanie linii \texttt{\textbackslash{}hline}, która oddzieli dany wiersz tabeli od kolejnych. Można też zrobić podwójną linię (\texttt{\textbackslash{}hline\textbackslash{}hline}) w~celu odcięcia danego wiersza, na przykład nagłówka, od następnego za pomocą wąskiej, pustej przestrzeni.
+
+Tabele są jednym z trudniejszych elementów do wprowadzenia w~\LaTeX{u} ze względu na nagromadzenie znaczników. Dlatego warto rozważyć tworzenie tabeli za pomocą dedykowanego narzędzia on-line, takiego jak:
+
+\begin{itemize}
+	\item \href{https://www.latex-tables.com/}{LaTeX Tables Editor} -- dość rozbudowany, pozwala myszką rysować krawędzie i to w różnych kolorach.
+	\item \href{https://www.tablesgenerator.com/}{Tables Generator} -- podobny edytor do powyższego ale bardziej stara się przypominać edytory WYSIWYG. Wygenerowany kod ma kolorowaną składnię, więc dobrze się go ogląda. Zapamiętuje poprzednio edytowaną tabelkę.
+	\item \href{https://truben.no/table/}{Table Editor} -- prosty generator tabelek nie tylko dla LaTeXa.	
+\end{itemize}
+
+Dedykowane edytory, takie jak Kile\footnote{\href{https://kile.sourceforge.io/}{<https://kile.sourceforge.io/>}}, również często oferują taką funkcję. Zrzut ekranu pokazujący edycję tabeli w~tym programie pokazany jest na rysunku~\ref{rys:kile}.
+
+\begin{figure}[!t]
+	\centering \includegraphics[height=0.25\textheight]{kile.png} % rysunek o wysokości 1/4 wysokości tekstu na stronie
+	\caption{Wykorzystanie programu Kile do edycji tabeli}
+	\label{rys:kile}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Wzory}
+Jakość aplikacji do edycji tekstu najłatwiej poznać po typografii (estetyce) wzorów. W~tym obszarze prawdopodobnie nie ma lepszego narzędzia niż \LaTeX{}. Wzory zapisywane są za pomocą zbioru poleceń. Praktycznie tego samego zestawu znaczników do zapisu wzorów używa Wikipedia i popularna biblioteka \href{https://www.mathjax.org/}{MathJax}.
+
+Proste, bardziej popularne symbole matematyczne i~oznaczenia po pewnym czasie po prostu się pamięta. Jeśli chcemy uzyskać bardziej skomplikowane wzory lub użyć mniej popularnych symboli to warto sięgnąć po dokumentację dostępną na przykład na stronach Overleaf\footnote{\href{https://www.overleaf.com/learn/latex/Mathematical_expressions}{<Overleaf -- Mathematical expressions>}}. Można też wspomóc się zewnętrzną aplikacją taką jak na przykład Kile. Alternatywnie można skorzystać z~edytorów równań dostępnych online, takich jak:
+\begin{itemize}
+	\item \href{https://latex.codecogs.com/eqneditor/editor.php}{CodeCogs}
+	\item \href{https://www.latex4technics.com/}{Latex4technics}
+\end{itemize}
+Ich zaletą jest niemal natychmiastowe pokazywanie efektu. Poniżej znajduje się kilka przykładów zapisania wzorów.
+
+Warto zwrócić uwagę na programy do detekcji symboli matematycznych:
+\begin{itemize}
+	\item \href{https://detexify.kirelabs.org/classify.html}{Detexify} -- narzędzie online
+	\item TODO -- program dostępny TODO
+\end{itemize}
+
+Przykłady wzorów matematycznych poniżej.
+
+\begin{equation}
+	R = \frac{U}{I}
+\end{equation}
+
+Wzory można też umieszczać w tekście, otaczając je znakami dolara. Na przykład: $I=\frac{U}{R}$.
+
+Kolejny wzór ma gwiazdkę przy \texttt{equation} i dlatego nie będzie numerowany.
+
+\begin{equation*}
+	\vec{J} = nq \vec{v_d} =  \frac{nq^2 \tau}{m} \vec{E} = nq \mu \vec{E}    
+\end{equation*}
+
+Do wzoru można się odwoływać, jeśli ma on identyfikator i numer. Wzór~\ref{eq:ohm} wiąże gęstość prądu $\pmb{J}$ z~natężeniem pola elektrycznego $\pmb{E}$ w~przewodniku.
+
+\begin{equation}
+	\pmb{J} = \sigma \pmb{E}
+	\label{eq:ohm}
+\end{equation}
+
+
+Wzór Ampèra:
+
+\begin{equation}
+	\oint \vec{H} d\vec{l} = \int\limits_{S} \vec{J} \cdot d \vec{a} = I
+\end{equation}
+
+\begin{equation}
+	\nabla \times \vec{H} = \vec{J}
+\end{equation}
+
+
+Twierdzenie Faradaya:
+
+\begin{equation*}
+	\Phi_B = \iint\limits_{\sum (t)} \pmb{B}(t) \cdot d\pmb{A}
+\end{equation*}
+
+\begin{equation}
+	\mathcal{E} = -\frac{d\Phi_B}{dt}
+\end{equation}
+
+\begin{equation}
+	\nabla \times \pmb{E} = - \frac{\partial \pmb{B}}{\partial t}
+\end{equation}
+
+
+
+
+Jeszcze kilka przypadkowo wybranych wzorów:
+
+\begin{equation*}
+	r = \sqrt{r_x^2 + r_y^2}
+\end{equation*}
+
+\begin{equation}
+	\frac{dx}{dx} = 1
+\end{equation}
+
+\begin{equation}
+	\frac{d}{dx} \ln x = \frac{1}{x}
+\end{equation}
+
+\begin{equation}
+	y = \varphi  (y^\prime)x + \psi(y^\prime)
+\end{equation}
+
+\begin{equation}
+	f(t) = \frac{1}{\pi} \int\limits_0^\infty \mathrm{d} \omega \,\int\limits_{-\infty}^{+\infty} f(\tau)\, \cos \omega (t-\tau)  \mathrm{d}\tau
+\end{equation}
+
+\[
+\mathfrak{F}^{-1}\left(\mathfrak{F} \left[ f\left(t \right ) \right ] \right ) = f \left(t \right )
+\qquad \textup{oraz} \qquad
+\mathfrak{F}\left(\mathfrak{F}^{-1} \left[ F\left(j\omega \right ) \right ] \right ) = F \left(j\omega \right )
+\]
+
+\begin{equation*}
+	x \oplus y = \neg (x \equiv y) = (x \vee y) \wedge (\neg x \vee \neg y) = (x \wedge \neg y) \vee (\neg x \wedge y)
+\end{equation*}
+
+\begin{equation*}
+	\sum \frac{Q}{T} = 0
+\end{equation*}
+
+\begin{equation}
+	\oint \frac{dQ}{T} = 0
+\end{equation}
+
+\begin{equation}
+	\pmb{a} = \lim\limits_{\Delta t \to 0} \frac{\Delta \pmb{v}}{\Delta t} = \frac{d\pmb{v}}{dt}
+\end{equation}
+
+\begin{equation}
+	K = m\,c^2 - m_0\,c^2 
+	= m_0\,c^2 \left(
+	\frac{1}{ \sqrt{1 - \left( \frac{v}{c} \right)^2 } } -1 
+	\right)
+\end{equation}
+
+\begin{equation}
+	\frac{\partial^2 y}{\partial x^2} = \frac{\mu}{F} \; \frac{\partial^2 y}{\partial t^2}
+\end{equation}
+
+\begin{equation}
+	e^{\pm i\theta} = \cos \theta \pm i~\sin\theta
+\end{equation}
+
+\begin{equation}
+	U(M) = \lim\limits_{R\to 0} \iiint\limits_{G-K}\frac{\rho(P)}{r}dG
+\end{equation}
+
+\begin{equation*}
+	\left| \, \int\limits_{C_R} \frac{dz}{\left( 1+z^2 \right )^3} \, \right| \leqslant \sup\limits_{z \in C_R} \frac{1}{\left| 1+z^2 \right|^3} \; \pi R
+\end{equation*}
+
+W otoczeniu \texttt{align} można umieścić kilka wzorów jeden pod drugim oddzielając je znakiem nowego wiersza, czyli podwójnym ukośnikiem: \texttt{\textbackslash{}\textbackslash{}}. Wzory te poukładają się elegancko jeden pod drugim, jeśli w~każdej linii umieścimy jeden lub więcej znaków \&. Ważne, żeby w~każdej linii znak \texttt{\&} wystąpił tyle samo razy, gdyż wskazuje on miejsce wyrównania równań w~kolumnie.
+
+\begin{align}
+	g & = \frac{v^2}{R+h} \\
+	v & = \sqrt{ \left( R+h \right) g }
+\end{align}
+
+\begin{align}
+	y(t) = A_0 
+	+& A_1 \sin \omega t + 
+	A_2 \sin 2 \omega t + 
+	A_3 \sin 3 \omega t + \ldots + \nonumber \\
+	+& B_1 \cos \omega t + 
+	B_2 \cos 2 \omega t + 
+	B_1 \cos 3 \omega t + \ldots
+\end{align}
+
+\begin{align}
+	\nu^\prime  &= \frac{\left(vt / \lambda \right) + \left( v_0t / \lambda \right)}{t} = \nonumber\\
+	&= \frac{v + v_0}{\lambda} = \nonumber\\
+	&= \frac{v + v_0}{v / \nu} = \nonumber\\
+	&= \nu \frac{v+v_0}{v} = \nonumber\\
+	&= \nu \left( 1 + \frac{v_0}{v} \right)
+\end{align}
+
+Nieco bardziej skomplikowane wzory z eleganckim ułożeniem znaków równości w pionie:
+
+\begin{align}
+	\oiint\nolimits_{\partial \Omega} \pmb{E} \cdot \mathrm{d}\pmb{S} &= \frac{1}{\varepsilon_0} \iiint\nolimits_\Omega \rho \, \mathrm{d}V &  \nabla \cdot \pmb{E} &= \frac {\rho} {\varepsilon_0} \label{eq:maxwell1} \\
+	\oiint\nolimits_{\partial \Omega} \pmb{B} \cdot \mathrm{d}\pmb{S} &= 0 & \nabla \cdot \pmb{B} &= 0 \label{eq:maxwell2} \\
+	\oint\nolimits_{\partial \Sigma} \pmb{E} \cdot \mathrm{d}\boldsymbol{\ell} &= -\frac{\mathrm{d}}{\mathrm{d}t}\iint\nolimits_{\Sigma}\pmb{B}\cdot\mathrm{d}\pmb{S} & \nabla \times \pmb{E} &= -\frac{\partial \pmb{B}}{\partial t} \label{eq:maxwell3} \\
+	\oint\nolimits_{\partial \Sigma} \pmb{B} \cdot \mathrm{d}\boldsymbol{\ell} &= \mu_0 \iint\nolimits_{\Sigma} \pmb{J} \cdot \mathrm{d}\pmb{S} + \mu_0 \varepsilon_0 \frac{\mathrm{d}}{\mathrm{d}t} \iint\nolimits_{\Sigma} \pmb{E} \cdot \mathrm{d}\pmb{S} & \nabla \times \pmb{B} &= \mu_0\left(\pmb{J} + \varepsilon_0 \frac{\partial \pmb{E}} {\partial t} \right) \label{eq:maxwell4}
+\end{align}
+
+Otoczenie \texttt{gather} pozwala na łączenie na przykład macierzy ze ,,zwykłymi'' wzorami.
+
+\begin{gather}
+	\begin{bmatrix} \Phi_{11} & \Phi_{12} \\ \Phi_{21} & \Phi_{22} \end{bmatrix}
+	=
+	\frac{1}{\det(X)}
+	\begin{bmatrix}
+		X_{22} Y_{11} - X_{12} Y_{21} &
+		X_{22} Y_{12} - X_{12} Y_{22} \\
+		X_{11} Y_{21} - X_{21} Y_{11} &
+		X_{11} Y_{22} - X_{21} Y_{12} 
+	\end{bmatrix}
+\end{gather}
+
+\begin{gather}
+	a \times b = -b \times a~= 
+	\begin{vmatrix}
+		\pmb{i}    &     \pmb{j}      &      \pmb{k}    \\
+		a_x        &     a_y          &      a_z        \\
+		b_x        &     b_y          &      b_z        
+	\end{vmatrix}
+	= \left(a_y b_z - b_y a_z \right)\pmb{i} 
+	+ \left(a_z b_x - b_z a_x \right)\pmb{j} 
+	+ \left(a_x b_y - b_x a_y \right)\pmb{k} 
+\end{gather}
+
+% Na Wydziale Elektrycznym wzorów chemicznych raczej nie potrzebujemy zbyt często a~te kilka przypadków da się zapisać jako zwykłe równania.
+% Gdyby jednak ktoś bardzo chciał to można odkomentować linijkę z~pliku cls:
+%\RequirePackage[version=4]{mhchem}
+% a~wtedy zadziałają poniższe makra:
+%\ce{3H2O} \\
+%\ce{1/2H2O} \\
+%\ce{AgCl2-} \\
+%\ce{H2_{(aq)}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Kody źródłowe}
+Do umieszczania kodów źródłowych w~szablonie wykorzystany jest pakiet \texttt{listings}. Została przygotowana propozycja wyglądu listingów oparta o~prezentowane wcześniej kolory. Ustawienia można zmienić w~pliku \texttt{cls}. Poniżej znajduje się kilka przykładów wykorzystania wspomnianego pakietu. Więcej informacji można znaleźć na przykład w~dokumentacji Overleaf\footnote{\href{https://www.overleaf.com/learn/latex/code_listing}{<Overleaf -- Code listing>}}
+
+Kod źródłowy można umieścić bezpośrednio w~pliku tex, tak jak poniższy przykład z~listingu~\ref{lst:hellopy}. Jednak to nie jest najlepszy pomysł ze względu na spagetyzację pliku \TeX{owego}.
+
+\begin{lstlisting}[language=Python,
+	caption={Prosty skrypt w~języku Python},
+	label={lst:hellopy}]
+	#!/usr/bin/env python
+	# -*- coding: utf-8 -*-
+	"""Simple world of hello.
+	"""
+	
+	import sys
+	
+	def main():
+	"""The one and only function"""
+	fib = lambda n: reduce(lambda x, n: [x[1], x[0]+x[1]], range(n), [0, 1])[0]
+	try:
+	print(fib(int(sys.argv[1])))
+	except:
+	print("Hello World!")
+	
+	if __name__ == "__main__":
+	main()
+\end{lstlisting}
+
+Kolorowanie składni i~numerowanie linii dzieją się automatycznie przy czym tekst kodu nadal jest tekstem.  Wklejanie kodu w postaci zrzutu ekranu (rysunku) jest bardzo słabym pomysłem.
+
+Spójna kolorystyka kodów w~różnych językach może być pożądana albo wręcz przeciwnie. Dlatego można rozważyć jakąś, niewielką, lokalną zmianę stylu tak, jak w~poniższym przykładzie. Przykład kodu źródłowego w~innym języku (tutaj: C) jest pokazany w~listingu~\ref{lst:helloC}. 
+
+\begin{lstlisting}[language=C,
+	backgroundcolor=\color{EEGold!5!white},
+	caption={Prosty kod w~języku C},
+	label={lst:helloC}]
+	#include <stdlib.h>
+	#include <stdio.h>
+	/* 
+	Simple world of hello.
+	*/
+	
+	int main(int argc, char **argv) {
+		printf("Hello World!\n");
+		return EXIT_SUCCESS;
+	}
+\end{lstlisting}
+
+Zauważ bardzo niefortunne przejście na nową stronę, dodatkowo zakłócone przez przypis dolny, czego niestety \LaTeX{} nie jest w~stanie samodzielnie poprawić. Należałoby powyżej dopisać więcej tekstu by ,,przepchnąć'' kod na kolejną stronę, albo tę ilość tekstu zmniejszyć albo podzielić listing na mniejsze fragmenty i omówić osobno, albo przesunąć w treści -- działania do podjęcia są prawie takie same, jak w przypadku rysunków.
+
+Kod źródłowy lepiej trzymać w~zewnętrznym pliku i~załączać go do dokumentu dynamicznie, tak jak ma to miejsce w~przypadku listingu~\ref{lst:Keccak}. Można wskazać zakres linii, które powinny pojawić się w~dokumencie. Jednak wtedy zapewne warto pamiętać o~ustawieniu numeru pierwszej linii aby numeracja w~dokumencie zgadzała się z~faktycznym numerem linii w~pliku. Listing~\ref{lst:Keccak} ma automatycznie ustawiany podpis na podstawie nazwy pliku. W~pewnych sytuacjach może być to wygodniejsze niż ręczne wprowadzanie nazwy.
+
+\lstinputlisting[language=C,
+firstnumber=31,
+firstline=31,
+lastline=50,
+caption=\lstname,
+label={lst:Keccak}]{Keccak-inplace32BI.c}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Ozdobniki graficzne w~opisie oprogramowania}
+Szablon wczytuje pakiet pozwalający na wyróżnienie w~tekście informacji o~skrótach klawiszowych, poruszaniu się po menu programu i~ścieżki plików. Oczywiście nie ma konieczności korzystania z~tego dodatku, jeśli ktoś nie uważa go za potrzebny.
+
+W tekście można wyróżnić skróty klawiszowe, takie jak na przykład: \keys{\Alt, F4}, \keys{\ctrl, \Alt, \del}.
+\begin{itemize}
+	\item \keys{A, a, B, b, C, c, 1, 2, 3, PgUp}
+	\item \keys{\Space} \keys{\SPACE}
+	\item \keys{\backspace} \keys{\del} \keys{\backdel}
+	\item \keys{\return} \keys{\enter}
+	\item \keys{\shift} \keys{\capslock}
+	\item \keys{\ctrl} \keys{\Alt} \keys{\AltGr}
+	\item \keys{\tab}
+	\item \keys{\esc} \keys{\oldesc}
+	\item \keys{\winmenu}
+	\item \keys{\arrowkey{^}} \keys{\arrowkeyup}
+	\item \keys{\arrowkey{v}} \keys{\arrowkeydown}
+	\item \keys{\arrowkey{>}} \keys{\arrowkeyright}
+	\item \keys{\arrowkey{<}} \keys{\arrowkeyleft}
+\end{itemize}
+
+Jeśli opisujemy poruszanie się po menu to również można użyć ozdobnika graficznego: \menu{View > Zoom > Zoom in}.
+
+Podobne rozwiązanie jest dla ścieżek katalogów: \directory{etc / apache2 / mods-available}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Akronimy i~symbole}
+Zgodnie z~obowiązującym Zarządzeniem pod koniec pracy znajduje się lista symboli i~akronimów pod nazwą ,,Wykaz symboli i~skrótów''. Na liście wystąpią tylko te akronimy, które faktycznie zostaną użyte w~tekście, za pomocą jednej z~pokazanych niżej metod. Jeśli żaden akronim lub symbol w~tekście nie wystąpi, w~sensie użycia odwołania za pomocą odpowiedniego polecenia, to generowanie strony z~listą akronimów zostanie pominięte. Większość prac do tej pory była pozbawiona tego dodatku.
+
+Szablon używa pakietu \texttt{glossaries} do zarządzania akronimami i~symbolami. Listę tych elementów należy przygotować w~pliku \href{./glossary.tex}{glossary.tex}, zgodnie z~pokazanym tam szablonem. Aby w~pracy pojawiła się lista akronimów należy użyć polecenia:
+
+\begin{lstlisting}[language=bash,
+	numbers=none,
+	caption=Wygenerowanie listy skrótów i~symboli,
+	label={lst:gloss}]
+	makeglossaries [nazwa pliku podstawowego bez rozszerzenia tex]
+\end{lstlisting}
+
+Pierwsze użycie akronimu w~tekście jest rozpoznawane automatycznie i~pojawia się on w~pełnej oraz skróconej formie: \gls{CPEE}. Kolejnymi razy prezentuje się już tylko wersja skrócona, chociaż oba wywołania w~\LaTeX{u} wyglądają tak samo: \gls{CPEE}. Dzięki temu nie trzeba się zastanawiać, czy dany akronim został wcześniej pokazany w~pełnej formie, czy też jeszcze nie.
+
+Można też samodzielnie wybrać jaką formę ma przybrać akronim w~tekście, co nie wpływa na rozpoznawanie pierwszego użycia skrótu:
+\begin{itemize}
+	\item krótkiej: \acrshort{IEEE}, \acrshort{PW}, \acrshort{IETiSIP},
+	\item długiej: \acrlong{IEEE}, \acrlong{PW}, \acrlong{IETiSIP},
+	\item pełnej: \acrfull{IEEE}, \acrfull{PW}, \acrfull{IETiSIP}.
+\end{itemize}
+
+Chociaż na powyższej liście występuje \gls{PW} to tutaj akronim jest traktowany jak pojawiający się po raz pierwszy. Dopiero kolejne użycie daje inny efekt: \gls{PW}.
+
+W Overleaf wykorzystanie wykazu symboli matematycznych okazuje się sprawiać problemy -- indeks nie odświeża się automatycznie wtedy, gdy powinien. Żeby zmusić Overleaf do odświeżenia listy symboli i~akronimów, należy z~rozwijanego menu przy zielonym przycisku ,,Recompile'' wybrać opcję ,,Recompile from scratch''. Trwa to nieco dłużej ale spełnia swoją rolę.
+
+Przykład użycia symbolu natężenia prądu elektrycznego~\gls{symb:I}. Jedną z~ciekawszych liczb jest~\gls{symb:Pi}. Tak użyte symbole przy prawidłowej kompilacji pliku \texttt{PDF} znajdą się na indeksowanej liście a~więc będzie można znaleźć miejsca ich użycia w~pracy. Oczywiście to indeksowanie zadziała tylko wtedy, gdy odwołamy się do symbolu w~przedstawiony sposób.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Cytowania}
+Cytowania to nie to samo co odnośniki bibliograficzne. Cytowania nie są popularne w~naukach technicznych. Jednak przywołując czyjeś słowa trzeba cytat stosownie oznaczyć za pomocą cudzysłowów i~odniesienia do literatury.
+
+Cytując \textbf{nie należy} korzystać ze znaku " dostępnego na klawiaturze, ponieważ nie jest to zgodne z~polską tradycją piśmienniczą. Cytowania tekstu standardowo robi się ,,recznie'', oznaczając cudzysłowy za pomocą podwójnych przecinków i~apostrofów. Wiele programów (np.: TeXstudio) potrafi automatycznie zmieniać cudzysłów z klawiatury w polskie znaki cytowania - jest to opcja do włączenia w ustawieniach.
+
+Są dla \LaTeX{a} dostępne dodatki usprawniające obsługę cytowań ale zapewne na uczelni technicznej nie ma potrzeby ich stosowania.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Kompilowanie lokalnie}
+Darmowe konto w Overleaf zapewnia czas każdej kompilacji nie dłuższy niż 1 minuta. W~przypadku skomplikowanej pracy czas ten może zostać przekroczony i~wówczas Overleaf nie wygeneruje pliku wynikowego. Dlatego warto rozważyć pobranie szablonu na własny komputer z~zainstalowanym \LaTeX{em} (). Kompilacja może wówczas wyglądać tak, jak na listingu~\ref{lst:kompilacja}.
+
+\begin{lstlisting}[language=bash,
+	caption={Kompilacja pracy dyplomowej lokalnie},
+	label={lst:kompilacja}]
+	pdflatex EE-dyplom && biber EE-dyplom && makeglossaries EE-dyplom && pdflatex EE-dyplom && pdflatex EE-dyplom
+\end{lstlisting}
+
+Polecenie \textbf{pdflatex} można zastąpić przez \textbf{xelatex} i dla obu kompilatorów rezultat wynikowy powinien być niemal identyczny.
+
+Do edycji i kompilacji można skorzystać z dedykowanych programów takich jak:
+\begin{itemize}
+	\item MiKTeX z edytorem TeXworks (zawiera w sobie środowisko \LaTeX)
+	\item TeXstudio
+	\item Kile
+\end{itemize}
+
+Są to aplikacje wieloplatformowe dostępne dla Linux, Windows, macOS.
+
+
+\paragraph{Więcej informacji na temat \LaTeX{a}}
+\begin{itemize}
+	\item \href{https://www.overleaf.com/learn}{<https://www.overleaf.com/learn>} -- przystępny tutorial na stronie Overleaf,
+	\item \href{https://www.latex-project.org/}{<https://www.latex-project.org/>} -- strona domowa projektu,
+	\item \href{https://www.tug.org/begin.html}{<https://www.tug.org/begin.html>} -- dobry zbiór odnośników do innych materiałów.
+\end{itemize}
+
+
+\end{easyappendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{easyappendix}{Dowód próżni doskonałej}
+\end{easyappendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{easyappendix}{Dowód zera bezwzględnego}
+\end{easyappendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{easyappendix}{Dowód czasu zatrzymanego}
+\end{easyappendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{easyappendix}{Dowód nieskończoności urojonej}
+\end{easyappendix}
