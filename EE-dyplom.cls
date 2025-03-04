@@ -494,9 +494,9 @@
 \RequirePackage{enumitem}
 \newlength\docparskip
 \setlength{\docparskip}{\parskip}
-\setlist[itemize,1]{nosep,
-        label=$\bullet$,    % ustawiony krój ma kwadratowe kropki
-}
+\setlist[itemize,1]{nosep, topsep=.25em}
+%        label=$\bullet$,    % bo ustawiony krój ma kwadratowe kropki
+%}
 \setlist[itemize,2]{nosep,label=--}
 \setlist[itemize,3]{nosep,label=-}
 \setlist[itemize,4]{nosep,label=$\cdot$}
