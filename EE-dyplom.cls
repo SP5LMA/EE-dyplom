@@ -321,13 +321,6 @@
 \lefthyphenmin 4
 
 % -------------------------------------------------------------------
-% Znaki cytowania % PL-EN
-% -------------------------------------------------------------------
-\RequirePackage{csquotes}
-\setquotestyle[guillemets]{polish}
-%\setquotestyle{english}
-
-% -------------------------------------------------------------------
 % Klikalne linki
 % -------------------------------------------------------------------
 \RequirePackage{hyperref}
