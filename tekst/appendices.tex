@@ -3,13 +3,13 @@
 \label{app:latex}
 
 Pusta linia oznacza nowy akapit.
-Ta linia kontynuuje poprzedni akapit, chociaż w~edytorze jest odrębną linią, oddzieloną jednym ,,enterem''. Wokół rysunków, tabel, listingów również należy zostawiać puste linie, gdyż w pewnym sensie stanowią odrębne akapity.
+Ta linia kontynuuje poprzedni akapit, chociaż w~edytorze jest odrębną linią, oddzieloną jednym ,,enterem''. Wokół rysunków, tabel, listingów również należy zostawiać puste linie, gdyż w~pewnym sensie stanowią odrębne akapity.
 
 
 
 
 
-Dużo pustych linii nie skutkuje większą ilością miejsca, gdyż w \LaTeX{u} nie ma możliwości ,,formatowania enterami       i      spacjami'', typowego dla gorszych rozwiązań i słabych umiejętności edycji tekstu.
+Dużo pustych linii nie skutkuje większą ilością miejsca, gdyż w~\LaTeX{u} nie ma możliwości ,,formatowania enterami       i~     spacjami'', typowego dla gorszych rozwiązań i~słabych umiejętności edycji tekstu.
 
 
 Strona tuż przed początkiem nowego rozdziału albo załącznika, czy innego wyróżnionego obszaru, może zostać całkiem pusta i~nawet nie będzie mieć numeracji u~dołu. Jest to jak najbardziej prawidłowe, gdyż rozdziały mają zaczynać się od strony prawej w~druku dwustronnym a~więc od strony nieparzystej. Stron bez tekstu nie numeruje się, chociaż są one liczone.
@@ -30,14 +30,14 @@ W przykładowym dokumencie pojawiło się modyfikowanie wyglądu liter za pomoc�
 \LaTeX{} ma duże możliwości jeśli chodzi o~formatowanie wypunktowań. Jednak zgodnie z~obowiązującymi na PW zaleceniami można stosować tylko dwa rodzaje punktorów:
 \begin{itemize}
 	\item standardową ,,kropkę'' -- rozwiązanie domyślne,
-	\item[--] myślnik -- wymaga interwencji, jak w tym przykładzie.
+	\item[--] myślnik -- wymaga interwencji, jak w~tym przykładzie.
 \end{itemize}
-Zatem nie można używać wypunktowań numerycznych, list opisowych i~tak dalej. Stosowane w niniejszym dodatku polecenie \texttt{paragraph} również powinno być unikane w pracy dyplomowej, gdyż wprowadza zbędne zamieszanie w strukturze pracy.
+Zatem nie można używać wypunktowań numerycznych, list opisowych i~tak dalej. Stosowane w~niniejszym dodatku polecenie \texttt{paragraph} również powinno być unikane w~pracy dyplomowej, gdyż wprowadza zbędne zamieszanie w~strukturze pracy.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Samotne literki}
 
-W polskiej tradycji piśmienniczej pojedyncze litery nie powinny występować na końcu linii. Aby połączyć taką literę z~następującym po nim słowem należy użyć znaku tyldy \keys{\textasciitilde{}}. Dotyczyć to może liter takich jak: a, i, o, u, w, z. Problem ten może dotyczyć też wielkich liter rozpoczynających zdania, o czym czasem zdarza się zapomnieć.
+W polskiej tradycji piśmienniczej pojedyncze litery nie powinny występować na końcu linii. Aby połączyć taką literę z~następującym po nim słowem należy użyć znaku tyldy \keys{\textasciitilde{}}. Dotyczyć to może liter takich jak: a, i, o, u, w, z. Problem ten może dotyczyć też wielkich liter rozpoczynających zdania, o~czym czasem zdarza się zapomnieć.
 
 Pod koniec pisania pracy dobrze jest skorzystać z~opcji ,,znajdź i~zamień'' by wymienić wszystkie ciągi znaków \keys{\SPACE, znak, \SPACE} na \keys{\SPACE, znak, \textasciitilde{}}.
 
@@ -59,7 +59,7 @@ Podejście do typografii w~\LaTeX{u} jest profesjonalne co wiąże się też z~d
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Tabele}
-Prostą tabelą, wprowadzoną ręcznie, jest przykładowa tabela~\ref{tab:zjawiska}. Tego rodzaju tabela wystarczy w~większości prac. Wygląd tabelaryczny uzyskuje się za pomocą otoczenia \texttt{tabular}. Sam wygląd tabelaryczny to jednak jeszcze nie jest tabela, tak jak zbiór komórek z~arkusza kalkulacyjnego nie jest tabelą. Aby uzyskać tabelę należy \texttt{tabular} otoczyć za pomocą środowiska \texttt{table}. Wtedy taką tabelę można opatrzyć tytułem (\texttt{caption}), koniecznie z góry i~znacznikiem (\texttt{label}) pozwalającym na odwołania do niej z~tekstu. To te same polecenia, co w przypadku rysunków.
+Prostą tabelą, wprowadzoną ręcznie, jest przykładowa tabela~\ref{tab:zjawiska}. Tego rodzaju tabela wystarczy w~większości prac. Wygląd tabelaryczny uzyskuje się za pomocą otoczenia \texttt{tabular}. Sam wygląd tabelaryczny to jednak jeszcze nie jest tabela, tak jak zbiór komórek z~arkusza kalkulacyjnego nie jest tabelą. Aby uzyskać tabelę należy \texttt{tabular} otoczyć za pomocą środowiska \texttt{table}. Wtedy taką tabelę można opatrzyć tytułem (\texttt{caption}), koniecznie z~góry i~znacznikiem (\texttt{label}) pozwalającym na odwołania do niej z~tekstu. To te same polecenia, co w~przypadku rysunków.
 
 \begin{table}[!ht]
 	\caption{\label{tab:zjawiska}Wybrane zjawiska astronomiczne z~lat 2016-2020}
@@ -74,7 +74,7 @@ Prostą tabelą, wprowadzoną ręcznie, jest przykładowa tabela~\ref{tab:zjawis
 	\end{tabular}
 \end{table}
 
-Podobnie jak dla rysunków tak i~tabelom można wskazać posadowienie za pomocą oznaczeń literowych (h, b, t) i~wykrzyknika. Umieszczenie tabeli w dole strony może kolidować z przypisem dolnym więc lepiej użyć dla nich ,,h'' lub ,,t'' albo obu jednocześnie. Przypisów dolnych jednak najlepiej nie stosować w ogóle, gdyż zaburzają ciągłość czytania tekstu.
+Podobnie jak dla rysunków tak i~tabelom można wskazać posadowienie za pomocą oznaczeń literowych (h, b, t) i~wykrzyknika. Umieszczenie tabeli w~dole strony może kolidować z~przypisem dolnym więc lepiej użyć dla nich ,,h'' lub ,,t'' albo obu jednocześnie. Przypisów dolnych jednak najlepiej nie stosować w~ogóle, gdyż zaburzają ciągłość czytania tekstu.
 
  Liczbę kolumn i~ułożenie w~nich tekstu określa się jako argumenty polecenia \texttt{tabular}:
 \begin{itemize}
@@ -87,16 +87,16 @@ Jeśli kolumny mają być oddzielone pionowymi liniami to między odpowiednimi l
 
 W kolejnych liniach treści z~poszczególnych kolumn oddziela się znakiem ,,\&''. Wiersz tabeli kończy się {\LaTeX}owym znakiem nowego wiersza czyli podwójnym ukośnikiem: ,,\textbackslash\textbackslash''. Za nim można wstawić polecenie oznaczające narysowanie linii \texttt{\textbackslash{}hline}, która oddzieli dany wiersz tabeli od kolejnych. Można też zrobić podwójną linię (\texttt{\textbackslash{}hline\textbackslash{}hline}) w~celu odcięcia danego wiersza, na przykład nagłówka, od następnego za pomocą wąskiej, pustej przestrzeni.
 
-Tabele są jednym z trudniejszych elementów do wprowadzenia w~\LaTeX{u} ze względu na nagromadzenie znaczników. Dlatego warto rozważyć tworzenie tabeli za pomocą dedykowanego narzędzia on-line, takiego jak:
+Tabele są jednym z~trudniejszych elementów do wprowadzenia w~\LaTeX{u} ze względu na nagromadzenie znaczników. Dlatego warto rozważyć tworzenie tabeli za pomocą dedykowanego narzędzia on-line, takiego jak:
 
 \begin{itemize}
-	\item \href{https://www.latex-tables.com/}{LaTeX Tables Editor} -- dość rozbudowany, pozwala myszką rysować krawędzie i to w różnych kolorach.
+	\item \href{https://www.latex-tables.com/}{LaTeX Tables Editor} -- dość rozbudowany, pozwala myszką rysować krawędzie i~to w~różnych kolorach.
 	\item \href{https://www.tablesgenerator.com/}{Tables Generator} -- podobny edytor do powyższego ale bardziej stara się przypominać edytory WYSIWYG. Wygenerowany kod ma kolorowaną składnię, więc dobrze się go ogląda. Zapamiętuje poprzednio edytowaną tabelkę.
 	\item \href{https://truben.no/table/}{Table Editor} -- prosty generator tabelek nie tylko dla LaTeXa.	
 \end{itemize}
 
 \begin{figure}[!ht]
-	\centering \includegraphics[height=0.25\textheight]{kile.png} % rysunek o wysokości 1/4 wysokości tekstu na stronie
+	\centering \includegraphics[height=0.25\textheight]{kile.png} % rysunek o~wysokości 1/4 wysokości tekstu na stronie
 	\caption{Wykorzystanie programu Kile do edycji tabeli}
 	\label{rys:kile}
 \end{figure}
@@ -105,7 +105,7 @@ Dedykowane edytory, takie jak \href{https://kile.sourceforge.io/}{Kile}, równie
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Wzory}
-Jakość aplikacji do edycji tekstu najłatwiej poznać po typografii (estetyce) wzorów. W~tym obszarze prawdopodobnie nie ma lepszego narzędzia niż \LaTeX{}. Wzory zapisywane są za pomocą zbioru poleceń. Praktycznie tego samego zestawu znaczników do zapisu wzorów używa Wikipedia i popularna biblioteka \href{https://www.mathjax.org/}{MathJax}.
+Jakość aplikacji do edycji tekstu najłatwiej poznać po typografii (estetyce) wzorów. W~tym obszarze prawdopodobnie nie ma lepszego narzędzia niż \LaTeX{}. Wzory zapisywane są za pomocą zbioru poleceń. Praktycznie tego samego zestawu znaczników do zapisu wzorów używa Wikipedia i~popularna biblioteka \href{https://www.mathjax.org/}{MathJax}.
 
 Proste, bardziej popularne symbole matematyczne i~oznaczenia po pewnym czasie po prostu się pamięta. Jeśli chcemy uzyskać bardziej skomplikowane wzory lub użyć mniej popularnych symboli to warto sięgnąć po dokumentację dostępną na przykład na stronach \href{https://www.overleaf.com/learn/latex/Mathematical_expressions}{Overleaf -- Mathematical expressions}. Można też wspomóc się zewnętrzną aplikacją taką jak na przykład Kile. Alternatywnie można skorzystać z~edytorów równań dostępnych online, takich jak:
 \begin{itemize}
@@ -126,15 +126,15 @@ Przykłady wzorów matematycznych poniżej.
 	R = \frac{U}{I}
 \end{equation}
 
-Wzory można też umieszczać w tekście, otaczając je znakami dolara. Na przykład: $I=\frac{U}{R}$.
+Wzory można też umieszczać w~tekście, otaczając je znakami dolara. Na przykład: $I=\frac{U}{R}$.
 
-Kolejny wzór ma gwiazdkę przy \texttt{equation} i dlatego nie będzie numerowany.
+Kolejny wzór ma gwiazdkę przy \texttt{equation} i~dlatego nie będzie numerowany.
 
 \begin{equation*}
 	\vec{J} = nq \vec{v_d} =  \frac{nq^2 \tau}{m} \vec{E} = nq \mu \vec{E}    
 \end{equation*}
 
-Do wzoru można się odwoływać, jeśli ma on identyfikator i numer. Wzór~\ref{eq:ohm} wiąże gęstość prądu $\pmb{J}$ z~natężeniem pola elektrycznego $\pmb{E}$ w~przewodniku.
+Do wzoru można się odwoływać, jeśli ma on identyfikator i~numer. Wzór~\ref{eq:ohm} wiąże gęstość prądu $\pmb{J}$ z~natężeniem pola elektrycznego $\pmb{E}$ w~przewodniku.
 
 \begin{equation}
 	\pmb{J} = \sigma \pmb{E}
@@ -259,7 +259,7 @@ W otoczeniu \texttt{align} można umieścić kilka wzorów jeden pod drugim oddz
 	&= \nu \left( 1 + \frac{v_0}{v} \right)
 \end{align}
 
-Nieco bardziej skomplikowane wzory z eleganckim ułożeniem znaków równości w pionie:
+Nieco bardziej skomplikowane wzory z~eleganckim ułożeniem znaków równości w~pionie:
 
 \begin{align}
 	\oiint\nolimits_{\partial \Omega} \pmb{E} \cdot \mathrm{d}\pmb{S} &= \frac{1}{\varepsilon_0} \iiint\nolimits_\Omega \rho \, \mathrm{d}V &  \nabla \cdot \pmb{E} &= \frac {\rho} {\varepsilon_0} \label{eq:maxwell1} \\
@@ -331,7 +331,7 @@ Kod źródłowy można umieścić bezpośrednio w~pliku tex, tak jak poniższy p
 	main()
 \end{lstlisting}
 
-Kolorowanie składni i~numerowanie linii dzieją się automatycznie przy czym tekst kodu nadal jest tekstem.  Wklejanie kodu w postaci zrzutu ekranu (rysunku) jest bardzo słabym pomysłem.
+Kolorowanie składni i~numerowanie linii dzieją się automatycznie przy czym tekst kodu nadal jest tekstem.  Wklejanie kodu w~postaci zrzutu ekranu (rysunku) jest bardzo słabym pomysłem.
 
 Spójna kolorystyka kodów w~różnych językach może być pożądana albo wręcz przeciwnie. Dlatego można rozważyć jakąś, niewielką, lokalną zmianę stylu tak, jak w~poniższym przykładzie. Przykład kodu źródłowego w~innym języku (tutaj: C) jest pokazany w~listingu~\ref{lst:helloC}. 
 
@@ -351,7 +351,7 @@ Spójna kolorystyka kodów w~różnych językach może być pożądana albo wrę
 	}
 \end{lstlisting}
 
-Zauważ bardzo niefortunne przejście na nową stronę, dodatkowo zakłócone przez przypis dolny, czego niestety \LaTeX{} nie jest w~stanie samodzielnie poprawić. Należałoby powyżej dopisać więcej tekstu by ,,przepchnąć'' kod na kolejną stronę, albo tę ilość tekstu zmniejszyć albo podzielić listing na mniejsze fragmenty i omówić osobno, albo przesunąć w treści -- działania do podjęcia są prawie takie same, jak w przypadku rysunków.
+Zauważ bardzo niefortunne przejście na nową stronę, dodatkowo zakłócone przez przypis dolny, czego niestety \LaTeX{} nie jest w~stanie samodzielnie poprawić. Należałoby powyżej dopisać więcej tekstu by ,,przepchnąć'' kod na kolejną stronę, albo tę ilość tekstu zmniejszyć albo podzielić listing na mniejsze fragmenty i~omówić osobno, albo przesunąć w~treści -- działania do podjęcia są prawie takie same, jak w~przypadku rysunków.
 
 Kod źródłowy lepiej trzymać w~zewnętrznym pliku i~załączać go do dokumentu dynamicznie, tak jak ma to miejsce w~przypadku listingu~\ref{lst:Keccak}. Można wskazać zakres linii, które powinny pojawić się w~dokumencie. Jednak wtedy zapewne warto pamiętać o~ustawieniu numeru pierwszej linii aby numeracja w~dokumencie zgadzała się z~faktycznym numerem linii w~pliku. Listing~\ref{lst:Keccak} ma automatycznie ustawiany podpis na podstawie nazwy pliku. W~pewnych sytuacjach może być to wygodniejsze niż ręczne wprowadzanie nazwy.
 
@@ -413,19 +413,19 @@ Chociaż na powyższej liście występuje \gls{PW} to tutaj akronim jest traktow
 
 W Overleaf wykorzystanie wykazu symboli matematycznych okazuje się sprawiać problemy -- indeks nie odświeża się automatycznie wtedy, gdy powinien. Żeby zmusić Overleaf do odświeżenia listy symboli i~akronimów, należy z~rozwijanego menu przy zielonym przycisku ,,Recompile'' wybrać opcję ,,Recompile from scratch''. Trwa to nieco dłużej ale spełnia swoją rolę.
 
-Przykład użycia symbolu natężenia prądu elektrycznego~\gls{symb:I}. Jedną z~ciekawszych liczb jest~\gls{symb:Pi}. Tak użyte symbole przy prawidłowej kompilacji pliku \texttt{PDF} znajdą się na indeksowanej liście a~więc będzie można znaleźć miejsca ich użycia w~pracy. Oczywiście to indeksowanie zadziała tylko wtedy, gdy odwołamy się do symbolu w~przedstawiony sposób a nie na przykład za pomocą otoczenia matematycznego: $\pi$.
+Przykład użycia symbolu natężenia prądu elektrycznego~\gls{symb:I}. Jedną z~ciekawszych liczb jest~\gls{symb:Pi}. Tak użyte symbole przy prawidłowej kompilacji pliku \texttt{PDF} znajdą się na indeksowanej liście a~więc będzie można znaleźć miejsca ich użycia w~pracy. Oczywiście to indeksowanie zadziała tylko wtedy, gdy odwołamy się do symbolu w~przedstawiony sposób a~nie na przykład za pomocą otoczenia matematycznego: $\pi$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Cytowanie a cytaty}
-Cytaty to nie to samo, co cytowania i to nie to samo co odnośniki bibliograficzne. Cytaty nie są popularne w~naukach technicznych. Jednak przywołując czyjeś słowa trzeba cytat stosownie oznaczyć za pomocą cudzysłowów i~podając autora.
+\paragraph{Cytowanie a~cytaty}
+Cytaty to nie to samo, co cytowania i~to nie to samo co odnośniki bibliograficzne. Cytaty nie są popularne w~naukach technicznych. Jednak przywołując czyjeś słowa trzeba cytat stosownie oznaczyć za pomocą cudzysłowów i~podając autora.
 
-Cytując \textbf{nie należy} korzystać z dostępnego na klawiaturze znaku \keys{"{}}. Taki znak nie jest zgodny z~polską typografią. Cytowania tekstu standardowo robi się ,,recznie'', oznaczając cudzysłowy za pomocą podwójnych przecinków i~apostrofów. Wiele programów (np.: TeXstudio) potrafi automatycznie zmieniać cudzysłów wybrany z klawiatury w polskie znaki cytowania -- jest to opcja do włączenia w ustawieniach i bardzo ułatwia pisanie.
+Cytując \textbf{nie należy} korzystać z~dostępnego na klawiaturze znaku \keys{"{}}. Taki znak nie jest zgodny z~polską typografią. Cytowania tekstu standardowo robi się ,,recznie'', oznaczając cudzysłowy za pomocą podwójnych przecinków i~apostrofów. Wiele programów (np.: TeXstudio) potrafi automatycznie zmieniać cudzysłów wybrany z~klawiatury w~polskie znaki cytowania -- jest to opcja do włączenia w~ustawieniach i~bardzo ułatwia pisanie.
 
 Dodatki usprawniające obsługę cytowań są dostępne dla \LaTeX{a}, ale zapewne na uczelni technicznej nie ma potrzeby ich stosowania.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Kompilowanie lokalnie}
-Darmowe konto w Overleaf zapewnia czas każdej kompilacji nie dłuższy niż 1 minuta. W~przypadku skomplikowanej pracy czas ten może zostać przekroczony i~wówczas Overleaf nie wygeneruje pliku wynikowego. Dlatego warto rozważyć pobranie szablonu na własny komputer z~zainstalowanym \LaTeX{em}. Kompilacja może wówczas wyglądać tak, jak na listingu~\ref{lst:kompilacja}.
+Darmowe konto w~Overleaf zapewnia czas każdej kompilacji nie dłuższy niż 1 minuta. W~przypadku skomplikowanej pracy czas ten może zostać przekroczony i~wówczas Overleaf nie wygeneruje pliku wynikowego. Dlatego warto rozważyć pobranie szablonu na własny komputer z~zainstalowanym \LaTeX{em}. Kompilacja może wówczas wyglądać tak, jak na listingu~\ref{lst:kompilacja}.
 
 \begin{lstlisting}[language=bash,
 	caption={Kompilacja pracy dyplomowej lokalnie},
@@ -433,12 +433,12 @@ Darmowe konto w Overleaf zapewnia czas każdej kompilacji nie dłuższy niż 1 m
 	pdflatex EE-dyplom && biber EE-dyplom && makeglossaries EE-dyplom && pdflatex EE-dyplom && pdflatex EE-dyplom
 \end{lstlisting}
 
-Polecenie \textbf{pdflatex} można zastąpić przez \textbf{xelatex} i dla obu kompilatorów rezultat wynikowy powinien być niemal identyczny. Jednak nie należy mieszać obu rozwiązań gdyż ich pliki pośrednie zakłócają się nawzajem w procesie kompilacji.
+Polecenie \textbf{pdflatex} można zastąpić przez \textbf{xelatex} i~dla obu kompilatorów rezultat wynikowy powinien być niemal identyczny. Jednak nie należy mieszać obu rozwiązań gdyż ich pliki pośrednie zakłócają się nawzajem w~procesie kompilacji.
 
-Do edycji i kompilacji można skorzystać z dedykowanych aplikacji takich jak:
+Do edycji i~kompilacji można skorzystać z~dedykowanych aplikacji takich jak:
 \begin{itemize}
-	\item \href{https://miktex.org/}{MiKTeX} -- dla Windows, dostępny w MS Store, zawierający niezbędne narzędzia \LaTeX{a} i prosty edytor \href{https://www.tug.org/texworks/}{TeXworks}
-	\item \href{https://www.texstudio.org/}{TeXstudio} -- środowisko bardziej rozbudowane niż TeXworks ale łatwe w użyciu
+	\item \href{https://miktex.org/}{MiKTeX} -- dla Windows, dostępny w~MS Store, zawierający niezbędne narzędzia \LaTeX{a} i~prosty edytor \href{https://www.tug.org/texworks/}{TeXworks}
+	\item \href{https://www.texstudio.org/}{TeXstudio} -- środowisko bardziej rozbudowane niż TeXworks ale łatwe w~użyciu
 	\item \href{https://kile.sourceforge.io/}{Kile} -- podobne do TeXstudio
 \end{itemize}
 
