@@ -3,16 +3,16 @@
 \label{app:latex}
 
 Pusta linia oznacza nowy akapit.
-Ta linia kontynuuje poprzedni akapit, chociaż w~edytorze jest odrębną linią, oddzieloną jednym ,,enterem''. Wokół rysunków, tabel, listingów również należy zostawiać puste linie.
+Ta linia kontynuuje poprzedni akapit, chociaż w~edytorze jest odrębną linią, oddzieloną jednym ,,enterem''. Wokół rysunków, tabel, listingów również należy zostawiać puste linie, gdyż w pewnym sensie stanowią odrębne akapity.
 
 
 
 
 
-Dużo pustych linii nie skutkuje większą ilością miejsca -- nie ma tu ,,formatowania enterami       i      spacjami'', typowego dla gorszych rozwiązań.
+Dużo pustych linii nie skutkuje większą ilością miejsca, gdyż w \LaTeX{u} nie ma możliwości ,,formatowania enterami       i      spacjami'', typowego dla gorszych rozwiązań i słabych umiejętności edycji tekstu.
 
 
-Strona tuż przed początkiem nowego rozdziału może zostać całkiem pusta i~nawet nie będzie mieć numeracji u~dołu. Jest to jak najbardziej prawidłowe, gdyż rozdziały mają zaczynać się od strony prawej w~druku dwustronnym a~więc od strony nieparzystej. Stron bez tekstu nie numeruje się, chociaż są one liczone.
+Strona tuż przed początkiem nowego rozdziału albo załącznika, czy innego wyróżnionego obszaru, może zostać całkiem pusta i~nawet nie będzie mieć numeracji u~dołu. Jest to jak najbardziej prawidłowe, gdyż rozdziały mają zaczynać się od strony prawej w~druku dwustronnym a~więc od strony nieparzystej. Stron bez tekstu nie numeruje się, chociaż są one liczone.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Styl tekstu}
@@ -30,9 +30,9 @@ W przykładowym dokumencie pojawiło się modyfikowanie wyglądu liter za pomoc�
 \LaTeX{} ma duże możliwości jeśli chodzi o~formatowanie wypunktowań. Jednak zgodnie z~obowiązującymi na PW zaleceniami można stosować tylko dwa rodzaje punktorów:
 \begin{itemize}
 	\item standardową ,,kropkę'' -- rozwiązanie domyślne,
-	\item[--] myślnik -- wymaga interwencji jak w tym przykładzie.
+	\item[--] myślnik -- wymaga interwencji, jak w tym przykładzie.
 \end{itemize}
-Zatem nie można używać wypunktowań numerycznych, list opisowych i~tak dalej. Stosowane w niniejszym dodatku polecenie \texttt{paragraph} również powinno być unikane w pracy dyplomowej gdyż wprowadza zbędne zamieszanie w strukturze pracy.
+Zatem nie można używać wypunktowań numerycznych, list opisowych i~tak dalej. Stosowane w niniejszym dodatku polecenie \texttt{paragraph} również powinno być unikane w pracy dyplomowej, gdyż wprowadza zbędne zamieszanie w strukturze pracy.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Samotne literki}
@@ -54,12 +54,12 @@ Podejście do typografii w~\LaTeX{u} jest profesjonalne co wiąże się też z~d
 	\end{itemize}
 	\item dwa znaki minus obok siebie ,,-{}-'' % tu celowo oddzielone, żeby się nie połączyły
 	to ,,prawdziwy'' myślnik (--) o~wyraźnie większej długości od dywizu -- można go stosować w~zdaniach złożonych, oddzielając spacjami od sąsiadujących z~nim wyrazów,
-	\item trzy znaki minus obok siebie praktycznie nie wystąpią w~pracach technicznych a~służą do oznaczania dialogów. --- Serio? --- Ano tak.
+	\item trzy znaki minus obok siebie praktycznie nie wystąpią w~pracach technicznych a~służą do oznaczania dialogów. ---~Serio? ---~Ano tak.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Tabele}
-Prostą tabelą, wprowadzoną ręcznie, jest tabela~\ref{tab:zjawiska}, która przedstawia kilka dat zjawisk astronomicznych. Tego rodzaju tabela wystarczy w~większości prac. Wygląd tabelaryczny uzyskuje się za pomocą otoczenia \texttt{tabular}. Sam wygląd tabelaryczny to jednak jeszcze nie jest tabela, tak jak zbiór komórek z~arkusza kalkulacyjnego nie jest tabelą. Aby uzyskać tabelę należy \texttt{tabular} otoczyć za pomocą środowiska \texttt{table}. Wtedy taką tabelę można opatrzyć tytułem (\texttt{caption}), koniecznie z góry i~znacznikiem (\texttt{label}) pozwalającym na odwołania do niej z~tekstu.
+Prostą tabelą, wprowadzoną ręcznie, jest przykładowa tabela~\ref{tab:zjawiska}. Tego rodzaju tabela wystarczy w~większości prac. Wygląd tabelaryczny uzyskuje się za pomocą otoczenia \texttt{tabular}. Sam wygląd tabelaryczny to jednak jeszcze nie jest tabela, tak jak zbiór komórek z~arkusza kalkulacyjnego nie jest tabelą. Aby uzyskać tabelę należy \texttt{tabular} otoczyć za pomocą środowiska \texttt{table}. Wtedy taką tabelę można opatrzyć tytułem (\texttt{caption}), koniecznie z góry i~znacznikiem (\texttt{label}) pozwalającym na odwołania do niej z~tekstu. To te same polecenia, co w przypadku rysunków.
 
 \begin{table}[!ht]
 	\caption{\label{tab:zjawiska}Wybrane zjawiska astronomiczne z~lat 2016-2020}
@@ -74,7 +74,7 @@ Prostą tabelą, wprowadzoną ręcznie, jest tabela~\ref{tab:zjawiska}, która p
 	\end{tabular}
 \end{table}
 
-Podobnie jak dla rysunków tak i~tabelom można wskazać posadowienie za pomocą oznaczeń literowych (h, b, t) i~wykrzyknika. Umieszczenie tabeli w dole strony może kolidować z przypisem dolnym. Przypisów dolnych jednak najlepiej nie stosować wcale.
+Podobnie jak dla rysunków tak i~tabelom można wskazać posadowienie za pomocą oznaczeń literowych (h, b, t) i~wykrzyknika. Umieszczenie tabeli w dole strony może kolidować z przypisem dolnym więc lepiej użyć dla nich ,,h'' lub ,,t'' albo obu jednocześnie. Przypisów dolnych jednak najlepiej nie stosować w ogóle, gdyż zaburzają ciągłość czytania tekstu.
 
  Liczbę kolumn i~ułożenie w~nich tekstu określa się jako argumenty polecenia \texttt{tabular}:
 \begin{itemize}
@@ -95,29 +95,29 @@ Tabele są jednym z trudniejszych elementów do wprowadzenia w~\LaTeX{u} ze wzgl
 	\item \href{https://truben.no/table/}{Table Editor} -- prosty generator tabelek nie tylko dla LaTeXa.	
 \end{itemize}
 
-Dedykowane edytory, takie jak Kile\footnote{\href{https://kile.sourceforge.io/}{<https://kile.sourceforge.io/>}}, również często oferują taką funkcję. Zrzut ekranu pokazujący edycję tabeli w~tym programie pokazany jest na rysunku~\ref{rys:kile}.
-
-\begin{figure}[!t]
+\begin{figure}[!ht]
 	\centering \includegraphics[height=0.25\textheight]{kile.png} % rysunek o wysokości 1/4 wysokości tekstu na stronie
 	\caption{Wykorzystanie programu Kile do edycji tabeli}
 	\label{rys:kile}
 \end{figure}
 
+Dedykowane edytory, takie jak \href{https://kile.sourceforge.io/}{Kile}, również często oferują taką funkcję. Zrzut ekranu pokazujący edycję tabeli w~tym programie pokazany jest na rysunku~\ref{rys:kile}.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Wzory}
 Jakość aplikacji do edycji tekstu najłatwiej poznać po typografii (estetyce) wzorów. W~tym obszarze prawdopodobnie nie ma lepszego narzędzia niż \LaTeX{}. Wzory zapisywane są za pomocą zbioru poleceń. Praktycznie tego samego zestawu znaczników do zapisu wzorów używa Wikipedia i popularna biblioteka \href{https://www.mathjax.org/}{MathJax}.
 
-Proste, bardziej popularne symbole matematyczne i~oznaczenia po pewnym czasie po prostu się pamięta. Jeśli chcemy uzyskać bardziej skomplikowane wzory lub użyć mniej popularnych symboli to warto sięgnąć po dokumentację dostępną na przykład na stronach Overleaf\footnote{\href{https://www.overleaf.com/learn/latex/Mathematical_expressions}{<Overleaf -- Mathematical expressions>}}. Można też wspomóc się zewnętrzną aplikacją taką jak na przykład Kile. Alternatywnie można skorzystać z~edytorów równań dostępnych online, takich jak:
+Proste, bardziej popularne symbole matematyczne i~oznaczenia po pewnym czasie po prostu się pamięta. Jeśli chcemy uzyskać bardziej skomplikowane wzory lub użyć mniej popularnych symboli to warto sięgnąć po dokumentację dostępną na przykład na stronach \href{https://www.overleaf.com/learn/latex/Mathematical_expressions}{Overleaf -- Mathematical expressions}. Można też wspomóc się zewnętrzną aplikacją taką jak na przykład Kile. Alternatywnie można skorzystać z~edytorów równań dostępnych online, takich jak:
 \begin{itemize}
 	\item \href{https://latex.codecogs.com/eqneditor/editor.php}{CodeCogs}
 	\item \href{https://www.latex4technics.com/}{Latex4technics}
 \end{itemize}
-Ich zaletą jest niemal natychmiastowe pokazywanie efektu. Poniżej znajduje się kilka przykładów zapisania wzorów.
+Ich zaletą jest niemal natychmiastowe pokazywanie efektu bez konieczności czasochłonnej rekompilacji całego dokumentu.
 
 Warto zwrócić uwagę na programy do detekcji symboli matematycznych:
 \begin{itemize}
-	\item \href{https://detexify.kirelabs.org/classify.html}{Detexify} -- narzędzie online
-	\item TODO -- program dostępny TODO
+	\item \href{https://detexify.kirelabs.org/classify.html}{Detexify} -- narzędzie online,
+	\item \href{https://github.com/zoeyfyi/TeX-Match}{TeX Match} -- wieloplatformowa, desktopowa wersja Detexify.
 \end{itemize}
 
 Przykłady wzorów matematycznych poniżej.
@@ -166,9 +166,6 @@ Twierdzenie Faradaya:
 \begin{equation}
 	\nabla \times \pmb{E} = - \frac{\partial \pmb{B}}{\partial t}
 \end{equation}
-
-
-
 
 Jeszcze kilka przypadkowo wybranych wzorów:
 
@@ -237,7 +234,7 @@ Jeszcze kilka przypadkowo wybranych wzorów:
 	\left| \, \int\limits_{C_R} \frac{dz}{\left( 1+z^2 \right )^3} \, \right| \leqslant \sup\limits_{z \in C_R} \frac{1}{\left| 1+z^2 \right|^3} \; \pi R
 \end{equation*}
 
-W otoczeniu \texttt{align} można umieścić kilka wzorów jeden pod drugim oddzielając je znakiem nowego wiersza, czyli podwójnym ukośnikiem: \texttt{\textbackslash{}\textbackslash{}}. Wzory te poukładają się elegancko jeden pod drugim, jeśli w~każdej linii umieścimy jeden lub więcej znaków \&. Ważne, żeby w~każdej linii znak \texttt{\&} wystąpił tyle samo razy, gdyż wskazuje on miejsce wyrównania równań w~kolumnie.
+W otoczeniu \texttt{align} można umieścić kilka wzorów jeden pod drugim oddzielając je znakiem nowego wiersza, czyli podwójnym ukośnikiem: \texttt{\textbackslash{}\textbackslash{}}. Wzory te poukładają się elegancko jeden pod drugim, jeśli w~każdej linii umieścimy jeden lub więcej znaków \&. Ważne, żeby w~każdej linii znak \texttt{\&} wystąpił tyle samo razy, gdyż wskazuje on miejsce wyrównania równań w~kolumnie. Przykłady poniżej.
 
 \begin{align}
 	g & = \frac{v^2}{R+h} \\
