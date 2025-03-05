@@ -684,8 +684,9 @@
 % Jedno polecenie - kombajn stron początkowych
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}} 
-\AtBeginDocument{\counterwithout{lstlisting}{chapter}}
+%\AtBeginDocument{\counterwithout{lstlisting}{chapter}}
 \newcommand{\frontpages}{
+    \counterwithout{lstlisting}{chapter} % hack niestety
     \pagestyle{empty}
     \maketitle
     \abstractpages
