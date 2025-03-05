@@ -321,36 +321,16 @@
 \lefthyphenmin 4
 
 % -------------------------------------------------------------------
-% Klikalne linki
-% -------------------------------------------------------------------
-\RequirePackage{hyperref}
-\hypersetup{ % Na bazie https://en.wikibooks.org/wiki/LaTeX/Hyperlinks
-%    bookmarks=true,         % show bookmarks bar? FIXME
-    unicode=true,           % non-Latin characters in Acrobat’s bookmarks
-    pdftoolbar=true,        % show Acrobat’s toolbar?
-    pdfmenubar=true,        % show Acrobat’s menu?
-    pdffitwindow=false,     % window fit to page when opened
-    pdfstartview={FitH},    % fits the width of the page to the window
-%    pdfsubject={}, % subject of the document
-%    pdfkeywords={}, % list of keywords
-    linktoc=all,            % defines which part of an entry in the table 
-                            %of contents is made into a link (none,section,page,all)
-    pdfnewwindow=true,      % links in new PDF window
-    colorlinks=true,        % false: boxed links; true: colored links
-    linkcolor=EEBlueDark,   % color of internal links (change box color with linkbordercolor)
-    citecolor=EEBlueDark,   % color of links to bibliography
-    filecolor=EEBlueDark,   % color of file links
-    urlcolor=EEBlueDark,    % color of external links
-    linkbordercolor={1 0 0},     % color of frame around internal links (if colorlinks=false)
-    citebordercolor={0 1 0},     % color of frame around citations
-    urlbordercolor={0 1 1},     % color of frame around URL links 
-}
-
-% -------------------------------------------------------------------
 % Wypełniacze do testowania typografii
 % -------------------------------------------------------------------
 %\RequirePackage{lipsum}
 %\RequirePackage{bredzenie}
+
+% -------------------------------------------------------------------
+% Ścieżki do grafik
+% -------------------------------------------------------------------
+\RequirePackage{graphicx}
+\graphicspath{{gfx/}{rysunki/}}
 
 % -------------------------------------------------------------------
 % Formatowanie tabel
@@ -361,60 +341,93 @@
 \RequirePackage{colortbl}
 
 % -------------------------------------------------------------------
-% Kolory
+% Kolory według System identyfikacji wizualnej PW, wersja 1. 06 2023
 % -------------------------------------------------------------------
 \RequirePackage[usenames,dvipsnames]{xcolor}
-\definecolor{mysamplecolor}{rgb}{0.123, 0.456, 0.789}
-% Kolory wydziałów "budowlanych"
-\definecolor{bud}{RGB}{106, 186, 156}
+% Kolory podstawowe
+\definecolor{ciemnozielony}{RGB}{0, 104, 114}
+\definecolor{granatowy}{RGB}{0, 74, 108}
+\definecolor{bezowy}{RGB}{200, 193, 182} % beżowy a nie bezowy ;)
 
-% Kolory wydziałów "mechanicznych"
-\definecolor{mech}{RGB}{234, 124, 90}
-
-% Kolory wydziałów "chemicznych"
-\definecolor{chem}{RGB}{254, 213, 66}
-
-% Kolory wydziałów "elektrycznych"
-\definecolor{elek}{RGB}{120, 150, 207}
-
-% Kolory wydziałów "matematyczno-fizycznych"
-\definecolor{mfiz}{RGB}{150, 95, 119}
-
-% Kolory wydziałów "multidyscyplinarnych"
-\definecolor{multi}{RGB}{180, 160, 170}
+% Kolory dodatkowe
+\definecolor{mietowy}{RGB}{192, 209, 200}
+\definecolor{niebieski}{RGB}{52, 102, 175}
+\definecolor{zolty}{RGB}{231, 162, 23}
+\definecolor{jasnoczerwony}{RGB}{230, 51, 18}
+\definecolor{ciemnoczerwony}{RGB}{154, 15, 6}
+\definecolor{fioletowy}{RGB}{94, 49, 86}
+% Dawne kolory - zostawiam bo może komuś się przydadzą
+%% Kolory wydziałów "budowlanych"
+%\definecolor{bud}{RGB}{106, 186, 156}
+%
+%% Kolory wydziałów "mechanicznych"
+%\definecolor{mech}{RGB}{234, 124, 90}
+%
+%% Kolory wydziałów "chemicznych"
+%\definecolor{chem}{RGB}{254, 213, 66}
+%
+%% Kolory wydziałów "elektrycznych"
+%\definecolor{elek}{RGB}{120, 150, 207}
+%
+%% Kolory wydziałów "matematyczno-fizycznych"
+%\definecolor{mfiz}{RGB}{150, 95, 119}
+%
+%% Kolory wydziałów "multidyscyplinarnych"
+%\definecolor{multi}{RGB}{180, 160, 170}
 
 % Kolor Wydziału Elektrycznego i dwa pokrewne monochromatyczne.
 % Kolor podstawowy jest tu określony w przybliżeniu, gdyż 
 % Zarządzenie definiuje go niejednoznacznie. Dla wskazanego 
 % Pantone 2716C i 2716U podane wartości CMYK (50, 30, 0, 0) 
 % są inne niż podaje to Pantone na swej stronie www (38, 26, 0, 0).
-\definecolor{EEBlue}{cmyk}{0.50, 0.30, 0, 0}            % #8ba5d3 
-\definecolor{EEBlueLight}{cmyk}{0.14, 0.04, 0.03, 0}    % #e2ecf8
-\definecolor{EEBlueDark}{cmyk}{0.73, 0.55, 0.35, 0.32}  % #45536a
-% Uzupełniający dla EEBlue - pomarańczowy
-\definecolor{EEOrange}{cmyk}{0.02, 0.41, 0.94, 0}       % #f6a307
-% Uzupełniające bliskie dla EEBlue, 10 stopni na kole barw
-\definecolor{EETangerine}{RGB}{255, 119, 0}
-\definecolor{EEGold}{RGB}{255, 209, 0}
-\definecolor{EEAzure}{RGB}{0, 136, 255}
-\definecolor{EEUltramarine}{RGB}{0, 46, 255}
+%\definecolor{EEBlue}{cmyk}{0.50, 0.30, 0, 0}            % #8ba5d3 
+%\definecolor{EEBlueLight}{cmyk}{0.14, 0.04, 0.03, 0}    % #e2ecf8
+%\definecolor{EEBlueDark}{cmyk}{0.73, 0.55, 0.35, 0.32}  % #45536a
+%% Uzupełniający dla EEBlue - pomarańczowy
+%\definecolor{EEOrange}{cmyk}{0.02, 0.41, 0.94, 0}       % #f6a307
+%% Uzupełniające bliskie dla EEBlue, 10 stopni na kole barw
+%\definecolor{EETangerine}{RGB}{255, 119, 0}
+%\definecolor{EEGold}{RGB}{255, 209, 0}
+%\definecolor{EEAzure}{RGB}{0, 136, 255}
+%\definecolor{EEUltramarine}{RGB}{0, 46, 255}
 
 % -------------------------------------------------------------------
-% Ścieżki do grafik
+% Klikalne linki
 % -------------------------------------------------------------------
-\RequirePackage{graphicx}
-\graphicspath{{gfx/}{rysunki/}}
+\RequirePackage{hyperref}
+\hypersetup{ % Na bazie https://en.wikibooks.org/wiki/LaTeX/Hyperlinks
+	%    bookmarks=true,         % show bookmarks bar? FIXME
+	unicode=true,           % non-Latin characters in Acrobat’s bookmarks
+	pdftoolbar=true,        % show Acrobat’s toolbar?
+	pdfmenubar=true,        % show Acrobat’s menu?
+	pdffitwindow=false,     % window fit to page when opened
+	pdfstartview={FitH},    % fits the width of the page to the window
+	%    pdfsubject={}, % subject of the document
+	%    pdfkeywords={}, % list of keywords
+	linktoc=all,            % defines which part of an entry in the table 
+	%of contents is made into a link (none,section,page,all)
+	pdfnewwindow=true,      % links in new PDF window
+	colorlinks=true,        % false: boxed links; true: colored links
+	linkcolor=granatowy,   % color of internal links (change box color with linkbordercolor)
+	citecolor=ciemnoczerwony,   % color of links to bibliography
+	filecolor=granatowy,   % color of file links
+	urlcolor=granatowy,    % color of external links
+	linkbordercolor={1 0 0},     % color of frame around internal links (if colorlinks=false)
+	citebordercolor={0 1 0},     % color of frame around citations
+	urlbordercolor={0 1 1},     % color of frame around URL links 
+}
 
 % -------------------------------------------------------------------
 % Listingi programów
 % -------------------------------------------------------------------
 \RequirePackage{listings}
-\lstdefinestyle{EEStyle}{
-	backgroundcolor=\color{gray!3!white},
-    commentstyle=\color{EEBlueDark},
-    keywordstyle=\bfseries\color{EEUltramarine},
-    numberstyle=\tiny\color{EEBlueDark},
-    stringstyle=\color{EETangerine},
+\lstdefinestyle{basiclststyle}{
+	backgroundcolor=\color{mietowy!10!white},
+    numberstyle=\tiny\color{black},
+    commentstyle=\color{mietowy!50!black},
+    keywordstyle=\bfseries\color{ciemnoczerwony},
+    identifierstyle=\color{niebieski},
+    stringstyle=\color{fioletowy},
     basicstyle=\ttfamily\small,
     breakatwhitespace=false,
     breaklines=true,
@@ -435,7 +448,7 @@
     aboveskip=1.46557em,
     belowskip=1em
 }
-\lstset{style=EEStyle}
+\lstset{style=basiclststyle}
 
 % -------------------------------------------------------------------
 % Ozdobniki ścieżek plików, menu i klawiszy
