@@ -416,12 +416,12 @@ W Overleaf wykorzystanie wykazu symboli matematycznych okazuje się sprawiać pr
 Przykład użycia symbolu natężenia prądu elektrycznego~\gls{symb:I}. Jedną z~ciekawszych liczb jest~\gls{symb:Pi}. Tak użyte symbole przy prawidłowej kompilacji pliku \texttt{PDF} znajdą się na indeksowanej liście a~więc będzie można znaleźć miejsca ich użycia w~pracy. Oczywiście to indeksowanie zadziała tylko wtedy, gdy odwołamy się do symbolu w~przedstawiony sposób a nie na przykład za pomocą otoczenia matematycznego: $\pi$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Cytowania}
-Cytowania to nie to samo co odnośniki bibliograficzne. Cytowania nie są popularne w~naukach technicznych. Jednak przywołując czyjeś słowa trzeba cytat stosownie oznaczyć za pomocą cudzysłowów i~odniesienia do literatury.
+\paragraph{Cytowanie a cytaty}
+Cytaty to nie to samo, co cytowania i to nie to samo co odnośniki bibliograficzne. Cytaty nie są popularne w~naukach technicznych. Jednak przywołując czyjeś słowa trzeba cytat stosownie oznaczyć za pomocą cudzysłowów i~podając autora.
 
-Cytując \textbf{nie należy} korzystać ze znaku \keys{"{}} dostępnego na klawiaturze, ponieważ nie jest to zgodne z~polską tradycją piśmienniczą. Cytowania tekstu standardowo robi się ,,recznie'', oznaczając cudzysłowy za pomocą podwójnych przecinków i~apostrofów. Wiele programów (np.: TeXstudio) potrafi automatycznie zmieniać cudzysłów wybrany z klawiatury w polskie znaki cytowania -- jest to opcja do włączenia w ustawieniach.
+Cytując \textbf{nie należy} korzystać z dostępnego na klawiaturze znaku \keys{"{}}. Taki znak nie jest zgodny z~polską typografią. Cytowania tekstu standardowo robi się ,,recznie'', oznaczając cudzysłowy za pomocą podwójnych przecinków i~apostrofów. Wiele programów (np.: TeXstudio) potrafi automatycznie zmieniać cudzysłów wybrany z klawiatury w polskie znaki cytowania -- jest to opcja do włączenia w ustawieniach i bardzo ułatwia pisanie.
 
-Są dla \LaTeX{a} dostępne dodatki usprawniające obsługę cytowań ale zapewne na uczelni technicznej nie ma potrzeby ich stosowania.
+Dodatki usprawniające obsługę cytowań są dostępne dla \LaTeX{a}, ale zapewne na uczelni technicznej nie ma potrzeby ich stosowania.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Kompilowanie lokalnie}
@@ -433,7 +433,7 @@ Darmowe konto w Overleaf zapewnia czas każdej kompilacji nie dłuższy niż 1 m
 	pdflatex EE-dyplom && biber EE-dyplom && makeglossaries EE-dyplom && pdflatex EE-dyplom && pdflatex EE-dyplom
 \end{lstlisting}
 
-Polecenie \textbf{pdflatex} można zastąpić przez \textbf{xelatex} i dla obu kompilatorów rezultat wynikowy powinien być niemal identyczny.
+Polecenie \textbf{pdflatex} można zastąpić przez \textbf{xelatex} i dla obu kompilatorów rezultat wynikowy powinien być niemal identyczny. Jednak nie należy mieszać obu rozwiązań gdyż ich pliki pośrednie zakłócają się nawzajem w procesie kompilacji.
 
 Do edycji i kompilacji można skorzystać z dedykowanych aplikacji takich jak:
 \begin{itemize}
