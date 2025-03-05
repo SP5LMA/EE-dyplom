@@ -389,9 +389,9 @@ Podobne rozwiązanie jest dla ścieżek katalogów: \directory{etc / apache2 / m
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Akronimy i~symbole}
-Zgodnie z~obowiązującym Zarządzeniem pod koniec pracy znajduje się lista symboli i~akronimów pod nazwą ,,Wykaz symboli i~skrótów''. Na liście wystąpią tylko te akronimy, które faktycznie zostaną użyte w~tekście, za pomocą jednej z~pokazanych niżej metod. Jeśli żaden akronim lub symbol w~tekście nie wystąpi, w~sensie użycia odwołania za pomocą odpowiedniego polecenia, to generowanie strony z~listą akronimów zostanie pominięte. Większość prac do tej pory była pozbawiona tego dodatku.
+Zgodnie z~obowiązującym Zarządzeniem pod koniec pracy znajduje się lista symboli i~akronimów pod nazwą ,,Wykaz symboli i~skrótów''. Na liście wystąpią tylko te akronimy, które faktycznie zostaną użyte w~tekście, za pomocą jednej z~pokazanych niżej metod. Jeśli żaden akronim lub symbol w~tekście nie wystąpi, w~sensie użycia odwołania za pomocą odpowiedniego polecenia, to generowanie strony z~listą akronimów zostanie pominięte.
 
-Szablon używa pakietu \texttt{glossaries} do zarządzania akronimami i~symbolami. Listę tych elementów należy przygotować w~pliku \href{./glossary.tex}{glossary.tex}, zgodnie z~pokazanym tam szablonem. Aby w~pracy pojawiła się lista akronimów należy użyć polecenia:
+Szablon używa pakietu \texttt{glossaries} do zarządzania akronimami i~symbolami. Listę tych elementów należy przygotować w~pliku \texttt{glossary.tex}, zgodnie z~pokazanym tam szablonem. Aby w~pracy pojawiła się lista akronimów należy użyć polecenia:
 
 \begin{lstlisting}[language=bash,
 	numbers=none,
@@ -413,13 +413,13 @@ Chociaż na powyższej liście występuje \gls{PW} to tutaj akronim jest traktow
 
 W Overleaf wykorzystanie wykazu symboli matematycznych okazuje się sprawiać problemy -- indeks nie odświeża się automatycznie wtedy, gdy powinien. Żeby zmusić Overleaf do odświeżenia listy symboli i~akronimów, należy z~rozwijanego menu przy zielonym przycisku ,,Recompile'' wybrać opcję ,,Recompile from scratch''. Trwa to nieco dłużej ale spełnia swoją rolę.
 
-Przykład użycia symbolu natężenia prądu elektrycznego~\gls{symb:I}. Jedną z~ciekawszych liczb jest~\gls{symb:Pi}. Tak użyte symbole przy prawidłowej kompilacji pliku \texttt{PDF} znajdą się na indeksowanej liście a~więc będzie można znaleźć miejsca ich użycia w~pracy. Oczywiście to indeksowanie zadziała tylko wtedy, gdy odwołamy się do symbolu w~przedstawiony sposób.
+Przykład użycia symbolu natężenia prądu elektrycznego~\gls{symb:I}. Jedną z~ciekawszych liczb jest~\gls{symb:Pi}. Tak użyte symbole przy prawidłowej kompilacji pliku \texttt{PDF} znajdą się na indeksowanej liście a~więc będzie można znaleźć miejsca ich użycia w~pracy. Oczywiście to indeksowanie zadziała tylko wtedy, gdy odwołamy się do symbolu w~przedstawiony sposób a nie na przykład za pomocą otoczenia matematycznego: $\pi$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Cytowania}
 Cytowania to nie to samo co odnośniki bibliograficzne. Cytowania nie są popularne w~naukach technicznych. Jednak przywołując czyjeś słowa trzeba cytat stosownie oznaczyć za pomocą cudzysłowów i~odniesienia do literatury.
 
-Cytując \textbf{nie należy} korzystać ze znaku " dostępnego na klawiaturze, ponieważ nie jest to zgodne z~polską tradycją piśmienniczą. Cytowania tekstu standardowo robi się ,,recznie'', oznaczając cudzysłowy za pomocą podwójnych przecinków i~apostrofów. Wiele programów (np.: TeXstudio) potrafi automatycznie zmieniać cudzysłów z klawiatury w polskie znaki cytowania - jest to opcja do włączenia w ustawieniach.
+Cytując \textbf{nie należy} korzystać ze znaku \keys{"{}} dostępnego na klawiaturze, ponieważ nie jest to zgodne z~polską tradycją piśmienniczą. Cytowania tekstu standardowo robi się ,,recznie'', oznaczając cudzysłowy za pomocą podwójnych przecinków i~apostrofów. Wiele programów (np.: TeXstudio) potrafi automatycznie zmieniać cudzysłów wybrany z klawiatury w polskie znaki cytowania -- jest to opcja do włączenia w ustawieniach.
 
 Są dla \LaTeX{a} dostępne dodatki usprawniające obsługę cytowań ale zapewne na uczelni technicznej nie ma potrzeby ich stosowania.
 
@@ -435,11 +435,11 @@ Darmowe konto w Overleaf zapewnia czas każdej kompilacji nie dłuższy niż 1 m
 
 Polecenie \textbf{pdflatex} można zastąpić przez \textbf{xelatex} i dla obu kompilatorów rezultat wynikowy powinien być niemal identyczny.
 
-Do edycji i kompilacji można skorzystać z dedykowanych programów takich jak:
+Do edycji i kompilacji można skorzystać z dedykowanych aplikacji takich jak:
 \begin{itemize}
-	\item MiKTeX z edytorem TeXworks (zawiera w sobie środowisko \LaTeX)
-	\item TeXstudio
-	\item Kile
+	\item \href{https://miktex.org/}{MiKTeX} -- dla Windows, dostępny w MS Store, zawierający niezbędne narzędzia \LaTeX{a} i prosty edytor \href{https://www.tug.org/texworks/}{TeXworks}
+	\item \href{https://www.texstudio.org/}{TeXstudio} -- środowisko bardziej rozbudowane niż TeXworks ale łatwe w użyciu
+	\item \href{https://kile.sourceforge.io/}{Kile} -- podobne do TeXstudio
 \end{itemize}
 
 Są to aplikacje wieloplatformowe dostępne dla Linux, Windows, macOS.
@@ -457,14 +457,6 @@ Są to aplikacje wieloplatformowe dostępne dla Linux, Windows, macOS.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{easyappendix}{Dowód próżni doskonałej}
-\end{easyappendix}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{easyappendix}{Dowód zera bezwzględnego}
-\end{easyappendix}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{easyappendix}{Dowód czasu zatrzymanego}
 \end{easyappendix}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
