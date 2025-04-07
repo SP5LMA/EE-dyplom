@@ -4,15 +4,15 @@ Rozdział kolejny po ,,Wstępie'' zawiera podstawy teoretyczne, czyli informacje
 
 Między tytułem rozdziału a~podrozdziału musi być choćby krótki tekst. Może to być na przykład ogólne wprowadzenie czytelnika w~ten rozdział.
 
-Oto przykładowe odwołanie do literatury~\cite{fowler2009}. Chcąc odnieść się do kilku pozycji jednocześnie, trzeba ich znaczniki wpisać po przecinku~\cite{maxwell1865,leksinski1995}. Jeśli pozycji literaturowych podamy więcej to \LaTeX może połączyć je w~zakres tak jak w~tym przykładzie~\cite{fowler2009, maxwell1865, leksinski1995}. Można też odnieść się do konkretnej strony~\cite[s.~38]{leksinski1995}. 
+Oto przykładowe odwołanie do literatury~\cite{fowler2009}. Chcąc odnieść się do kilku pozycji jednocześnie, trzeba ich znaczniki wpisać po przecinku~\cite{maxwell1865,leksinski1995}. Jeśli pozycji literaturowych podamy więcej to \LaTeX może połączyć je w~zakres tak jak w~tym przykładzie~\cite{fowler2009, maxwell1865, leksinski1995}. Można też odnieść się do konkretnej strony~\cite[s.~38]{leksinski1995}. ,,Przecięty'' w~połowie znacznik bibliograficzny nie wygląda dobrze. Poprawiłbym go zmieniając \underline{treść}, ale zostawiam tu dla przykładu.
 
 Znak tyldy przed wywołaniem \texttt{cite} ,,skleja'' odnośnik z~poprzedzającym je słowem za pomocą tak zwanej ,,twardej'' spacji. Kropka kończąca zdanie znajduje się za odnośnikiem bibliograficznym. Wówczas jest to prawidłowe odwołanie do bibliografii.
 
-Znacznik ,,fowler2009'', ,,maxwell1865'' i~tak dalej to identyfikatory pozycji bibliograficznych. Przekształceniem identyfikatorów na konkretne numery zajmuje się \LaTeX{}. Noty bibliograficzne mają określoną strukturę i~powinny znajdować się w~osobnym pliku, najlepiej o~nazwie zgodnej z~nazwą głównego pliku \TeX{owego} ale z~rozszerzeniem ,,bib'', czyli dla tego szablonu: \texttt{EE-dyplom.bib}. Plik ten jest plikiem tekstowym i~do jego modyfikacji nie potrzeba specjalistycznych narzędzi. Środowiska dedykowane edycji plików \LaTeX{owych}, takie jak \href{https://www.texstudio.org/}{TeXstudio} oraz \href{https://kile.sourceforge.io/}{Kile} mają wbudowane funkcje wspierające tworzenie not bibliograficznych.
+Znaczniki takie jak ,,fowler2009'' i~,,maxwell1865'', które możesz zobaczyć w~źródłowym (.tex) pliku pracy, to identyfikatory pozycji bibliograficznych. Przekształceniem identyfikatorów na konkretne numery zajmuje się \LaTeX{}. Noty bibliograficzne mają określoną strukturę i~powinny znajdować się w~osobnym pliku, najlepiej o~nazwie zgodnej z~nazwą głównego pliku \TeX{owego} ale z~rozszerzeniem ,,bib'', czyli dla tego szablonu: \texttt{EE-dyplom.bib}. Plik ten jest plikiem tekstowym i~do jego modyfikacji nie potrzeba specjalistycznych narzędzi. Środowiska dedykowane edycji plików \LaTeX{owych}, takie jak \href{https://www.texstudio.org/}{TeXstudio} oraz \href{https://kile.sourceforge.io/}{Kile} mają wbudowane funkcje wspierające tworzenie not bibliograficznych.
 
 Ponadto można wspomóc się aplikacjami do zarządzania bibliografią, takimi jak \href{https://www.jabref.org/}{JabRef}, \href{https://www.zotero.org/}{Zotero} albo \href{https://userbase.kde.org/KBibTeX}{KBibTex}. Są to programy otwartoźródłowe, wolne, darmowe i~wieloplatformowe przy czym Zotero zachęca do skorzystania z~opcjonalnego, odpłatnego przechowywania informacji w~chmurze. Alternatywnie można posłużyć się aplikacjami komercyjnymi: \href{https://www.mendeley.com/}{Mendeley} albo \href{https://endnote.com/}{Endnote}. Programów takich jest więcej a~ich przegląd znajduje się \href{https://en.wikipedia.org/wiki/Comparison_of_reference_management_software}{na Wikipedii}.
 
-Ułatwieniem w~edycji tego pliku może być to, że serwisy takie jak IEEE Xplore pozwalają na pobranie cytowania w~standardzie BibTeX. Mamy wówczas niemal pewność, że składnia w~pliku \texttt{EE-dyplom.bib} jest poprawna a~nota bibliograficzna zawiera komplet potrzebnych informacji. Inne serwisy gromadzące publikacje naukowe zazwyczaj mają podobne funkcje.
+Ułatwieniem w~edycji pliku z~bibliografią może być to, że serwisy takie jak IEEE Xplore pozwalają na pobranie cytowania w~standardzie BibTeX. Mamy wówczas niemal pewność, że składnia w~pliku \texttt{EE-dyplom.bib} jest poprawna a~nota bibliograficzna zawiera komplet potrzebnych informacji. Inne serwisy gromadzące publikacje naukowe zazwyczaj mają podobne funkcje.
 
 Każda zmiana pliku z~bibliografią wymaga jego rekompilacji. W~tym szablonie stosowany jest do tego program Biber. Zatem kompilacja odbywa się w~trzech krokach:
 \begin{itemize}
@@ -20,7 +20,7 @@ Każda zmiana pliku z~bibliografią wymaga jego rekompilacji. W~tym szablonie st
 	\item kompilacja pliku *.bib -- wydzielenie i~sformatowanie potrzebnych not bibliograficznych za pomocą Bibera,
 	\item kompilacja pliku(-ów) *.tex -- podstawienie numerów pod identyfikatory i~dołączenie bibliografii za pomocą pdf\LaTeX{a}.
 \end{itemize}
-W~Overleaf i~wielu programach liczne kroki kompilacji są skonsolidowane i~mogą nawet nie być widoczne. 
+W~Overleaf i~wielu programach liczne kroki kompilacji są skonsolidowane i~mogą nawet nie być widoczne. Niniejszemu szablonowi towarzyszy prosty plik Makefile, który może stanowić sugestię kroków kompilacji ręcznej. Edytory takie jak TeXworks, TeXstudio, Kile zazwyczaj ,,wiedzą co mają robić'' lub czynią potrzebne narzędzia dostępniejszymi.
 
 W tym szablonie noty bibliograficzne są sortowane w~kolejności ich przywołania w~tekście. Czyli w~treści ,,numerki'' pierwszych odwołań do bibliografii będą pojawiały się po kolei i~będą zgodne z~numeracją w~bibliografii. Dzieje się to automatycznie, również po zmianie kolejności przywołań literatury, więc nie trzeba się o~to martwić.
 
@@ -41,11 +41,13 @@ Płatne serwisy udostępniające takie materiały są dostępne dla pracowników
 Dodatkowe miejsca pozyskiwania wartościowych źródeł:
 
 \begin{itemize}
+		
+	\item \href{https://uprp.gov.pl/}{Urząd Patentowy Rzeczypospolitej Polskiej}
+	\item \href{https://www.epo.org/en}{European Patent Office}
+	\item \href{https://www.uspto.gov/}{United States Patent and Trademark Office}
+	\item \href{https://patents.google.com/}{Google Patents}
 	\item \href{https://www.nist.gov/}{National Institute of Standards and Technology}
 	\item \href{https://www.etsi.org/}{European Telecommunications Standards Institute}
-	\item \href{https://www.uspto.gov/}{United States Patent and Trademark Office}
-	\item \href{https://www.epo.org/en}{European Patent Office}
-	\item \href{https://patents.google.com/}{Google Patents}
 \end{itemize}
 
 \section{Przegląd stanu wiedzy}
@@ -67,8 +69,9 @@ Analiza literatury to nie jest zbiór przypadkowych ,,pozycji bibliograficznych'
 \begin{itemize}
 	\item ściśle wiązać się z~tematem pracy,
 	\item poziomem złożoności odpowiadać zakresowi pracy dyplomowej, 
-	\item kierować tekst pracy na drodze ,,od ogółu do szczegółu'' w~stronę rozdziału następnego, czyli do realizacji części ,,autorskiej''.
+	\item kierować tekst pracy na drodze ,,od ogółu do szczegółu'', w~stronę rozdziału następnego, czyli do realizacji części ,,autorskiej''.
 \end{itemize}
 
 Praca magisterska ze względu na konieczny w~niej ,,wątek badawczy'' powinna bazować na szerszym zakresie literatury, która nie tylko zostanie omówiona ale również poddana krytycznej analizie.
 
+Następna strona jest kompletnie pusta i~tak ma być, gdyż wymogiem edytorskim jest, by nowe rozdziały (przy druku dwustronnym) zaczynały się na stronie nieparzystej.

@@ -92,7 +92,8 @@ Tabele są jednym z~trudniejszych elementów do wprowadzenia w~\LaTeX{u} ze wzgl
 \begin{itemize}
 	\item \href{https://www.latex-tables.com/}{LaTeX Tables Editor} -- dość rozbudowany, pozwala myszką rysować krawędzie i~to w~różnych kolorach.
 	\item \href{https://www.tablesgenerator.com/}{Tables Generator} -- podobny edytor do powyższego ale bardziej stara się przypominać edytory WYSIWYG. Wygenerowany kod ma kolorowaną składnię, więc dobrze się go ogląda. Zapamiętuje poprzednio edytowaną tabelkę.
-	\item \href{https://truben.no/table/}{Table Editor} -- prosty generator tabelek nie tylko dla LaTeXa.	
+	\item \href{https://truben.no/table/}{Table Editor} -- prosty generator tabelek nie tylko dla LaTeXa.
+	\item \href{https://tableconvert.com/latex-generator} -- edycja i~konwersja tabelek w~różnych formatach.
 \end{itemize}
 
 \begin{figure}[!ht]
@@ -305,9 +306,11 @@ Otoczenie \texttt{gather} pozwala na łączenie na przykład macierzy ze ,,zwyk�
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Kody źródłowe}
-Do umieszczania kodów źródłowych w~szablonie wykorzystany jest pakiet \texttt{listings}. Została przygotowana propozycja wyglądu listingów oparta o~prezentowane wcześniej kolory. Ustawienia można zmienić w~pliku \texttt{cls}. Poniżej znajduje się kilka przykładów wykorzystania wspomnianego pakietu. Więcej informacji można znaleźć na przykład w~dokumentacji Overleaf\footnote{\href{https://www.overleaf.com/learn/latex/code_listing}{<Overleaf -- Code listing>}}
+Do umieszczania kodów źródłowych w~szablonie wykorzystany jest pakiet \texttt{listings}. Została przygotowana propozycja wyglądu listingów oparta o~prezentowane wcześniej kolory. Ustawienia można zmienić w~pliku \texttt{cls}. Poniżej znajduje się kilka przykładów wykorzystania wspomnianego pakietu. Więcej informacji można znaleźć na przykład w~dokumentacji Overleaf\footnote{\href{https://www.overleaf.com/learn/latex/code_listing}{<Overleaf -- Code listing>}}.
 
-Kod źródłowy można umieścić bezpośrednio w~pliku tex, tak jak poniższy przykład z~listingu~\ref{lst:hellopy}. Jednak to nie jest najlepszy pomysł ze względu na spagetyzację pliku \TeX{owego}.
+Wklejanie kodu w~postaci zrzutu ekranu (rysunku) jest niedopuszczalne gdyż \textit{tekst} kodu źródłowego jest \textit{tekstem}, nawet jeśli listing jest traktowany jako element graficzny.
+
+Kod źródłowy można umieścić bezpośrednio w~pliku tex, tak jak poniższy przykład z~listingu~\ref{lst:hellopy}. Jednak z~wielu powodów nie jest dobry pomysł.
 
 \begin{lstlisting}[language=Python,
 	caption={Prosty skrypt w~języku Python},
@@ -320,18 +323,18 @@ Kod źródłowy można umieścić bezpośrednio w~pliku tex, tak jak poniższy p
 	import sys
 	
 	def main():
-	"""The one and only function"""
-	fib = lambda n: reduce(lambda x, n: [x[1], x[0]+x[1]], range(n), [0, 1])[0]
-	try:
-	print(fib(int(sys.argv[1])))
-	except:
-	print("Hello World!")
+		"""The one and only function"""
+		fib = lambda n: reduce(lambda x, n: [x[1], x[0]+x[1]], range(n), [0, 1])[0]
+		try:
+			print(fib(int(sys.argv[1])))
+		except:
+			print("Hello World!")
 	
 	if __name__ == "__main__":
-	main()
+		main()
 \end{lstlisting}
 
-Kolorowanie składni i~numerowanie linii dzieją się automatycznie przy czym tekst kodu nadal jest tekstem.  Wklejanie kodu w~postaci zrzutu ekranu (rysunku) jest bardzo słabym pomysłem.
+Kolorowanie składni i~numerowanie linii dzieją się automatycznie przy czym tekst kodu nadal jest tekstem.
 
 Spójna kolorystyka kodów w~różnych językach może być pożądana albo wręcz przeciwnie. Dlatego można rozważyć jakąś, niewielką, lokalną zmianę stylu tak, jak w~poniższym przykładzie. Przykład kodu źródłowego w~innym języku (tutaj: C) jest pokazany w~listingu~\ref{lst:helloC}. 
 
@@ -341,9 +344,6 @@ Spójna kolorystyka kodów w~różnych językach może być pożądana albo wrę
 	label={lst:helloC}]
 	#include <stdlib.h>
 	#include <stdio.h>
-	/* 
-	Simple world of hello.
-	*/
 	
 	int main(int argc, char **argv) {
 		printf("Hello World!\n");
@@ -361,6 +361,8 @@ firstline=31,
 lastline=50,
 caption=\lstname,
 label={lst:Keccak}]{Keccak-inplace32BI.c}
+
+W otoczeniu listing nie można stosować polskich znaków diakrytycznych.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Ozdobniki graficzne w~opisie oprogramowania}
@@ -385,7 +387,7 @@ W tekście można wyróżnić skróty klawiszowe, takie jak na przykład: \keys{
 
 Jeśli opisujemy poruszanie się po menu to również można użyć ozdobnika graficznego: \menu{View > Zoom > Zoom in}.
 
-Podobne rozwiązanie jest dla ścieżek katalogów: \directory{etc / apache2 / mods-available}.
+Podobne rozwiązanie jest dla ścieżek katalogów: \directory{/etc/apache2/mods-available}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Akronimy i~symbole}
@@ -437,13 +439,12 @@ Polecenie \textbf{pdflatex} można zastąpić przez \textbf{xelatex} i~dla obu k
 
 Do edycji i~kompilacji można skorzystać z~dedykowanych aplikacji takich jak:
 \begin{itemize}
-	\item \href{https://miktex.org/}{MiKTeX} -- dla Windows, dostępny w~MS Store, zawierający niezbędne narzędzia \LaTeX{a} i~prosty edytor \href{https://www.tug.org/texworks/}{TeXworks}
-	\item \href{https://www.texstudio.org/}{TeXstudio} -- środowisko bardziej rozbudowane niż TeXworks ale łatwe w~użyciu
-	\item \href{https://kile.sourceforge.io/}{Kile} -- podobne do TeXstudio
+	\item \href{https://miktex.org/}{MiKTeX} -- dla Windows, dostępny w~MS Store, zawierający niezbędne narzędzia \LaTeX{a} i~prosty edytor \href{https://www.tug.org/texworks/}{TeXworks}.
+	\item \href{https://www.texstudio.org/}{TeXstudio} -- środowisko bardziej rozbudowane niż TeXworks ale łatwe w~użyciu, potrzebuje kompilatora \LaTeX{a} więc pod Windows można je zainstalować po przetestowaniu MiKTeXa.
+	\item \href{https://kile.sourceforge.io/}{Kile} -- podobne do TeXstudio.
 \end{itemize}
 
-Są to aplikacje wieloplatformowe dostępne dla Linux, Windows, macOS.
-
+Są to aplikacje wieloplatformowe dostępne dla Linux, Windows, macOS. Użytkownicy systemu Linux najpewniej pobiorą odpowiednie oprogramowanie, zaczynając od ,,\TeX Live'', z~repozytoriów używanej dystrybucji.
 
 \paragraph{Więcej informacji na temat \LaTeX{a}}
 \begin{itemize}
